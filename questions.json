@@ -1,102 +1,100 @@
-
 {
-    "questions": [
-      {
-        "topic": "Cloud Concepts",
-        "question": "Which architectural principle suggests that AWS applications should be able to adapt to changes in capacity and demand?",
-        "options": {
-          "A": "Design for adaptability",
-          "B": "Design for consistency",
-          "C": "Design for elasticity",
-          "D": "Design for durability"
-        },
-        "answer": "C",
-        "explanation": "The principle of designing for elasticity suggests that applications should automatically adapt to changing capacities and demands, scaling resources up or down as needed."
+  "questions": [
+    {
+      "topic": "Cloud Concepts",
+      "question": "Which architectural principle suggests that AWS applications should be able to adapt to changes in capacity and demand?",
+      "options": {
+        "A": "Design for adaptability",
+        "B": "Design for consistency",
+        "C": "Design for durability",
+        "D": "Design for elasticity"
       },
-      {
-        "topic": "Cloud Concepts",
-        "question": "Why do businesses typically move to the cloud?",
-        "options": {
-          "A": "To use physical hardware",
-          "B": "To avoid innovation",
-          "C": "To gain operational agility",
-          "D": "To maximize upfront costs"
-        },
-        "answer": "C",
-        "explanation": "Moving to the cloud provides businesses with operational agility by allowing them to quickly adapt to changes, innovate, and reduce time-to-market."
+      "answer": "D",
+      "explanation": "The principle of designing for elasticity suggests that applications should automatically adapt to changing capacities and demands, scaling resources up or down as needed."
+    },
+    {
+      "topic": "Cloud Concepts",
+      "question": "Why do businesses typically move to the cloud?",
+      "options": {
+        "A": "To use physical hardware",
+        "B": "To avoid innovation",
+        "C": "To gain operational agility",
+        "D": "To maximize upfront costs"
       },
-      {
-        "topic": "Security and Compliance",
-        "question": "Which AWS service would be best for centrally managing policies across multiple AWS accounts?",
-        "options": {
-          "A": "AWS Config",
-          "B": "AWS Shield",
-          "C": "AWS Organizations",
-          "D": "AWS Macie"
-        },
-        "answer": "C",
-        "explanation": "AWS Organizations allows users to centrally manage and enforce policies for multiple AWS accounts."
+      "answer": "C",
+      "explanation": "Moving to the cloud provides businesses with operational agility by allowing them to quickly adapt to changes, innovate, and reduce time-to-market."
+    },
+    {
+      "topic": "Security and Compliance",
+      "question": "Which AWS service would be best for centrally managing policies across multiple AWS accounts?",
+      "options": {
+        "A": "AWS Config",
+        "B": "AWS Shield",
+        "C": "AWS Organizations",
+        "D": "AWS Macie"
       },
-      {
-        "topic": "Security and Compliance",
-        "question": "If a company wants to store highly sensitive data in S3, what should they consider doing?",
-        "options": {
-          "A": "Disable logging",
-          "B": "Use public read permissions",
-          "C": "Use S3 Transfer Acceleration",
-          "D": "Encrypt the data at rest"
-        },
-        "answer": "D",
-        "explanation": "Encrypting data at rest ensures that sensitive data remains secure and inaccessible to unauthorized users."
+      "answer": "C",
+      "explanation": "AWS Organizations allows users to centrally manage and enforce policies for multiple AWS accounts."
+    },
+    {
+      "topic": "Security and Compliance",
+      "question": "If a company wants to store highly sensitive data in S3, what should they consider doing?",
+      "options": {
+        "A": "Disable logging",
+        "B": "Encrypt the data at rest",
+        "C": "Use S3 Transfer Acceleration",
+        "D": "Use public read permissions"
       },
-      {
-        "topic": "Technology",
-        "question": "What can be used in AWS to automate the deployment of applications, networks, and services?",
-        "options": {
-          "A": "AWS Elastic Beanstalk",
-          "B": "AWS CloudFormation",
-          "C": "Amazon Comprehend",
-          "D": "Amazon Athena"
-        },
-        "answer": "B",
-        "explanation": "AWS CloudFormation allows users to define and provision AWS infrastructure using templates, automating the deployment of resources."
+      "answer": "B",
+      "explanation": "Encrypting data at rest ensures that sensitive data remains secure and inaccessible to unauthorized users."
+    },
+    {
+      "topic": "Technology",
+      "question": "What can be used in AWS to automate the deployment of applications, networks, and services?",
+      "options": {
+        "A": "AWS Elastic Beanstalk",
+        "B": "Amazon Athena",
+        "C": "Amazon Comprehend",
+        "D": "AWS CloudFormation"
       },
-      {
-        "topic": "Technology",
-        "question": "Which AWS service allows you to run SQL queries directly on data stored in Amazon S3?",
-        "options": {
-          "A": "AWS Lambda",
-          "B": "Amazon RDS",
-          "C": "Amazon Redshift",
-          "D": "Amazon Athena"
-        },
-        "answer": "D",
-        "explanation": "Amazon Athena allows users to run SQL queries directly on data stored in Amazon S3, without the need for complex ETL processes or additional infrastructure."
+      "answer": "D",
+      "explanation": "AWS CloudFormation allows users to define and provision AWS infrastructure using templates, automating the deployment of resources."
+    },
+    {
+      "topic": "Technology",
+      "question": "Which AWS service allows you to run SQL queries directly on data stored in Amazon S3?",
+      "options": {
+        "A": "Amazon Athena",
+        "B": "Amazon RDS",
+        "C": "Amazon Redshift",
+        "D": "AWS Lambda"
       },
-      {
-        "topic": "Billing and Pricing",
-        "question": "Which of the following is NOT a cost optimization recommendation in AWS?",
-        "options": {
-          "A": "Purchase Reserved Instances for steady-state applications.",
-          "B": "Store infrequently accessed data in S3 Glacier.",
-          "C": "Always use the largest EC2 instances available.",
-          "D": "Monitor usage patterns with AWS Cost Explorer."
-        },
-        "answer": "C",
-        "explanation": "Using the largest EC2 instances can lead to unnecessary costs. It's recommended to choose instance sizes based on actual application needs and to continuously monitor and adjust as required."
+      "answer": "A",
+      "explanation": "Amazon Athena allows users to run SQL queries directly on data stored in Amazon S3, without the need for complex ETL processes or additional infrastructure."
+    },
+    {
+      "topic": "Billing and Pricing",
+      "question": "Which of the following is NOT a cost optimization recommendation in AWS?",
+      "options": {
+        "A": "Purchase Reserved Instances for steady-state applications.",
+        "B": "Always use the largest EC2 instances available.",
+        "C": "Store infrequently accessed data in S3 Glacier.",
+        "D": "Monitor usage patterns with AWS Cost Explorer."
       },
-      {
-        "topic": "Billing and Pricing",
-        "question": "If you reserve an Amazon EC2 instance for a 1-year term, what pricing model are you adopting?",
-        "options": {
-          "A": "On-Demand pricing",
-          "B": "Spot Instance pricing",
-          "C": "Savings Plan",
-          "D": "Reserved Instance pricing"
-        },
-        "answer": "D",
-        "explanation": "Reserved Instances provide users with a discounted hourly rate (up to 75% off the On-Demand price) in exchange for committing to a 1-year or 3-year term."
-      }
-    ]
-  }
-  
+      "answer": "B",
+      "explanation": "Using the largest EC2 instances can lead to unnecessary costs. It's recommended to choose instance sizes based on actual application needs and to continuously monitor and adjust as required."
+    },
+    {
+      "topic": "Billing and Pricing",
+      "question": "If you reserve an Amazon EC2 instance for a 1-year term, what pricing model are you adopting?",
+      "options": {
+        "A": "On-Demand pricing",
+        "B": "Spot Instance pricing",
+        "C": "Reserved Instance pricing",
+        "D": "Savings Plan"
+      },
+      "answer": "C",
+      "explanation": "Reserved Instances provide users with a discounted hourly rate (up to 75% off the On-Demand price) in exchange for committing to a 1-year or 3-year term."
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-
+	quiz.RandomizeAnswers("questions.json")
 	quiz.StartApp()
 
 }
