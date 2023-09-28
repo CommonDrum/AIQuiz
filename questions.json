@@ -6,10 +6,10 @@
       "options": {
         "A": "Design for consistency",
         "B": "Design for durability",
-        "C": "Design for elasticity",
-        "D": "Design for adaptability"
+        "C": "Design for adaptability",
+        "D": "Design for elasticity"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": "The principle of designing for elasticity suggests that applications should automatically adapt to changing capacities and demands, scaling resources up or down as needed."
     },
     {
@@ -29,11 +29,11 @@
       "question": "Which AWS service would be best for centrally managing policies across multiple AWS accounts?",
       "options": {
         "A": "AWS Config",
-        "B": "AWS Organizations",
-        "C": "AWS Shield",
+        "B": "AWS Shield",
+        "C": "AWS Organizations",
         "D": "AWS Macie"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "AWS Organizations allows users to centrally manage and enforce policies for multiple AWS accounts."
     },
     {
@@ -53,23 +53,23 @@
       "question": "What can be used in AWS to automate the deployment of applications, networks, and services?",
       "options": {
         "A": "AWS Elastic Beanstalk",
-        "B": "Amazon Athena",
-        "C": "AWS CloudFormation",
+        "B": "AWS CloudFormation",
+        "C": "Amazon Athena",
         "D": "Amazon Comprehend"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "AWS CloudFormation allows users to define and provision AWS infrastructure using templates, automating the deployment of resources."
     },
     {
       "topic": "Technology",
       "question": "Which AWS service allows you to run SQL queries directly on data stored in Amazon S3?",
       "options": {
-        "A": "Amazon RDS",
-        "B": "Amazon Athena",
+        "A": "Amazon Athena",
+        "B": "Amazon RDS",
         "C": "Amazon Redshift",
         "D": "AWS Lambda"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "Amazon Athena allows users to run SQL queries directly on data stored in Amazon S3, without the need for complex ETL processes or additional infrastructure."
     },
     {
@@ -88,13 +88,423 @@
       "topic": "Billing and Pricing",
       "question": "If you reserve an Amazon EC2 instance for a 1-year term, what pricing model are you adopting?",
       "options": {
-        "A": "On-Demand pricing",
-        "B": "Reserved Instance pricing",
+        "A": "Reserved Instance pricing",
+        "B": "On-Demand pricing",
         "C": "Savings Plan",
         "D": "Spot Instance pricing"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "Reserved Instances provide users with a discounted hourly rate (up to 75% off the On-Demand price) in exchange for committing to a 1-year or 3-year term."
-    }
+    },
+    {
+      "topic": "Elastic Load Balancing",
+      "question": "Which AWS service is designed to automatically distribute incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses?",
+      "options": {
+        "A": "Amazon Route 53",
+        "B": "AWS Direct Connect",
+        "C": "Amazon Elastic Load Balancer",
+        "D": "Amazon EFS"
+      },
+      "answer": "C",
+      "explanation": "Amazon Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses, in one or more Availability Zones."
+    },
+    {
+      "topic": "Lambda",
+      "question": "Which AWS service allows you to run code without provisioning or managing servers and automatically scales, from a few requests per day to thousands per second?",
+      "options": {
+        "A": "AWS Lambda",
+        "B": "Amazon EC2",
+        "C": "Amazon EMR",
+        "D": "Amazon ECS"
+      },
+      "answer": "A",
+      "explanation": "AWS Lambda lets you run code without provisioning or managing servers. You can run code for virtually any type of application or backend service with zero administration."
+    },
+    {
+      "topic": "Security",
+      "question": "Which AWS service provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships change over time?",
+      "options": {
+        "A": "Amazon GuardDuty",
+        "B": "AWS Config",
+        "C": "Amazon Inspector",
+        "D": "AWS Shield"
+      },
+      "answer": "B",
+      "explanation": "AWS Config provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships change over time."
+    },
+    {
+      "topic": "Networking",
+      "question": "Which AWS service allows you to securely transfer data over a dedicated network connection from your on-premises environment to AWS?",
+      "options": {
+        "A": "Amazon VPC",
+        "B": "Amazon API Gateway",
+        "C": "AWS Direct Connect",
+        "D": "AWS Transit Gateway"
+      },
+      "answer": "C",
+      "explanation": "AWS Direct Connect makes it easy to establish a dedicated network connection from your premises to AWS, reducing your network costs, increasing bandwidth throughput, and providing a more consistent network experience."
+    },
+    {
+      "topic": "Storage",
+      "question": "Which AWS service offers a petabyte-scale data transport solution that uses secure devices to transfer large amounts of data into and out of the AWS Cloud?",
+      "options": {
+        "A": "Amazon S3 Transfer Acceleration",
+        "B": "Amazon EFS",
+        "C": "AWS Snowball",
+        "D": "AWS DataSync"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Database",
+      "question": "Which AWS database service is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability?",
+      "options": {
+        "A": "Amazon DynamoDB",
+        "B": "Amazon Aurora",
+        "C": "Amazon Redshift",
+        "D": "Amazon RDS"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Compute",
+      "question": "Which AWS service allows you to deploy, manage, and scale containerized applications using Kubernetes?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "Amazon ECR",
+        "C": "AWS Fargate",
+        "D": "Amazon EKS"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "topic": "Monitoring",
+      "question": "Which AWS service collects monitoring and operational data in the form of logs, metrics, and events?",
+      "options": {
+        "A": "AWS X-Ray",
+        "B": "Amazon CloudWatch",
+        "C": "AWS CloudTrail",
+        "D": "Amazon Inspector"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Security",
+      "question": "Which AWS service helps you protect your AWS accounts and workloads by enabling security automation based on AWS best practices?",
+      "options": {
+        "A": "AWS Secrets Manager",
+        "B": "Amazon Macie",
+        "C": "AWS WAF",
+        "D": "AWS Security Hub"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "topic": "Analytics",
+      "question": "Which AWS service is a fully managed extract, transform, and load (ETL) service that makes it easy for users to prepare and load their data for analytics?",
+      "options": {
+        "A": "Amazon QuickSight",
+        "B": "AWS Glue",
+        "C": "Amazon Athena",
+        "D": "Amazon Kinesis"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Migration \u0026 Transfer",
+      "question": "Which service helps you migrate databases to AWS easily and securely while the source database remains fully operational during the migration?",
+      "options": {
+        "A": "AWS DMS (Database Migration Service)",
+        "B": "AWS Migration Hub",
+        "C": "AWS Transfer for SFTP",
+        "D": "AWS Snowball Edge"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Machine Learning",
+      "question": "Which AWS service provides developers and data scientists with the tools to build, train, and deploy machine learning models quickly?",
+      "options": {
+        "A": "Amazon Polly",
+        "B": "Amazon SageMaker",
+        "C": "Amazon Translate",
+        "D": "Amazon Lex"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Front-End Web \u0026 Mobile",
+      "question": "Which AWS service allows you to add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily?",
+      "options": {
+        "A": "Amazon Pinpoint",
+        "B": "Amazon Cognito",
+        "C": "Amazon SNS",
+        "D": "AWS Amplify"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Cost Management",
+      "question": "Which AWS service provides insights, recommendations, and automation to track your AWS cost and usage?",
+      "options": {
+        "A": "AWS Organizations",
+        "B": "AWS Budgets",
+        "C": "AWS Trusted Advisor",
+        "D": "AWS Cost Explorer"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    [
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service provides a Virtual Private Network (VPN) solution to extend on-premises networks to AWS?",
+          "options": {
+            "A": "Amazon Connect",
+            "B": "Amazon Direct Connect",
+            "C": "AWS VPN",
+            "D": "Amazon Route 53"
+          },
+          "answer": "C"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which of the following provides centralized control to manage AWS cloud resources, view compliance status, and detect security and configuration drifts?",
+          "options": {
+            "A": "AWS Config",
+            "B": "AWS GuardDuty",
+            "C": "Amazon Inspector",
+            "D": "Amazon Macie"
+          },
+          "answer": "A"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which service allows for key management and cryptographic functions within AWS?",
+          "options": {
+            "A": "Amazon KMS",
+            "B": "AWS Secrets Manager",
+            "C": "AWS Single Sign-On",
+            "D": "Amazon Pinpoint"
+          },
+          "answer": "A"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS feature lets you control who can access your Amazon S3 buckets and objects?",
+          "options": {
+            "A": "Amazon S3 Access Points",
+            "B": "Amazon S3 ACLs",
+            "C": "Amazon S3 Block Public Access",
+            "D": "All of the above"
+          },
+          "answer": "D"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service continuously monitors your environment for signs of malicious or unauthorized activity?",
+          "options": {
+            "A": "Amazon CloudWatch",
+            "B": "AWS WAF",
+            "C": "AWS GuardDuty",
+            "D": "Amazon Detective"
+          },
+          "answer": "C"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which service allows you to analyze access patterns of IAM users and establish permissions based on access activity?",
+          "options": {
+            "A": "AWS Trusted Advisor",
+            "B": "AWS Access Analyzer",
+            "C": "IAM Roles",
+            "D": "Amazon GuardDuty"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "How can you ensure that data at rest in an S3 bucket is encrypted?",
+          "options": {
+            "A": "Use Amazon S3 default encryption",
+            "B": "Implement AWS KMS managed keys",
+            "C": "Use Server-Side Encryption",
+            "D": "All of the above"
+          },
+          "answer": "D"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service helps protect web applications from common web exploits?",
+          "options": {
+            "A": "AWS Shield",
+            "B": "AWS WAF",
+            "C": "Amazon Macie",
+            "D": "Amazon GuardDuty"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service provides deep visibility into API calls made on your account, including their source and the actions that followed?",
+          "options": {
+            "A": "AWS Config",
+            "B": "Amazon CloudWatch",
+            "C": "AWS CloudTrail",
+            "D": "Amazon S3 Logging"
+          },
+          "answer": "C"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "How can you ensure your EC2 instances are only accessible from specific IP addresses?",
+          "options": {
+            "A": "Using AWS WAF rules",
+            "B": "Restricting access through Security Groups",
+            "C": "Using Amazon GuardDuty",
+            "D": "Through S3 bucket policies"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service allows you to manage user access to AWS services and resources?",
+          "options": {
+            "A": "AWS Organizations",
+            "B": "AWS Identity and Access Management (IAM)",
+            "C": "AWS Single Sign-On",
+            "D": "Amazon Cognito"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service provides security posture management and automated security assessment reports?",
+          "options": {
+            "A": "Amazon Detective",
+            "B": "Amazon GuardDuty",
+            "C": "AWS Security Hub",
+            "D": "AWS Artifact"
+          },
+          "answer": "C"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service helps classify and protect sensitive data through machine learning?",
+          "options": {
+            "A": "Amazon Comprehend",
+            "B": "Amazon Macie",
+            "C": "AWS Shield",
+            "D": "Amazon CloudSearch"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "For compliance reasons, you need to retain API call logs for an extended period. Which service will you use?",
+          "options": {
+            "A": "Amazon CloudWatch Logs",
+            "B": "AWS CloudTrail with S3",
+            "C": "Amazon GuardDuty",
+            "D": "AWS Config"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which of the following is NOT a benefit of using AWS PrivateLink?",
+          "options": {
+            "A": "Keeps traffic off the public Internet",
+            "B": "Scales automatically",
+            "C": "Works with any AWS service",
+            "D": "Prevents DDoS attacks"
+          },
+          "answer": "C"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS feature or service provides hardware-based cryptographic key storage?",
+          "options": {
+            "A": "AWS Key Pairs",
+            "B": "Amazon S3 Server-Side Encryption",
+            "C": "AWS CloudHSM",
+            "D": "AWS Secrets Manager"
+          },
+          "answer": "C"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which service can be used to centrally manage users and their access across AWS accounts?",
+          "options": {
+            "A": "AWS Organizations",
+            "B": "AWS Directory Service",
+            "C": "Amazon Connect",
+            "D": "Amazon WorkDocs"
+          },
+          "answer": "A"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which of the following can be used to protect against DDoS attacks on AWS?",
+          "options": {
+            "A": "AWS Firewall Manager",
+            "B": "AWS Shield",
+            "C": "Amazon Detective",
+            "D": "Amazon Kinesis Data Streams"
+          },
+          "answer": "B"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "Which AWS service allows you to establish a dedicated network connection from your premises to AWS?",
+          "options": {
+            "A": "AWS Direct Connect",
+            "B": "Amazon VPC Peering",
+            "C": "AWS VPN CloudHub",
+            "D": "Amazon Route 53 Resolver"
+          },
+          "answer": "A"
+        },
+      
+        {
+          "topic": "Design Secure Architectures",
+          "question": "What does AWS recommend for the protection of AWS access keys?",
+          "options": {
+            "A": "Save them in plaintext documents",
+            "B": "Embed them in your application code",
+            "C": "Use IAM roles for EC2 instances",
+            "D": "Email them to team members"
+          },
+          "answer": "C"
+        }
+      ]
+      
   ]
 }
