@@ -4,12 +4,12 @@
       "topic": "Taylor Swift",
       "question": "Which album includes the hit song 'Love Story'?",
       "options": {
-        "A": "1989",
-        "B": "Fearless",
+        "A": "Fearless",
+        "B": "1989",
         "C": "Reputation",
         "D": "Red"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "'Love Story' is one of the hit songs from Taylor Swift's second studio album, 'Fearless', released in 2008."
     },
     {
@@ -17,35 +17,35 @@
       "question": "What is Taylor Swift's middle name?",
       "options": {
         "A": "Ashley",
-        "B": "Amanda",
-        "C": "Alison",
-        "D": "Andrea"
+        "B": "Andrea",
+        "C": "Amanda",
+        "D": "Alison"
       },
-      "answer": "C",
+      "answer": "D",
       "explanation": "Taylor Swift's middle name is Alison."
     },
     {
       "topic": "Taylor Swift",
       "question": "Which Taylor Swift album was released in 2014?",
       "options": {
-        "A": "1989",
+        "A": "Speak Now",
         "B": "Fearless",
-        "C": "Speak Now",
+        "C": "1989",
         "D": "Red"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "'1989' is Taylor Swift's fifth studio album, released on October 27, 2014."
     },
     {
       "topic": "Taylor Swift",
       "question": "In which year did Taylor Swift move to Nashville to pursue her music career?",
       "options": {
-        "A": "2005",
-        "B": "2004",
+        "A": "2004",
+        "B": "2005",
         "C": "2003",
         "D": "2006"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "Taylor Swift moved to Nashville in 2004 to pursue her music career."
     },
     {
@@ -54,10 +54,10 @@
       "options": {
         "A": "Red",
         "B": "I Knew You Were Trouble",
-        "C": "22",
-        "D": "State of Grace"
+        "C": "State of Grace",
+        "D": "22"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "The first track on the 'Red (Taylor’s Version)' album is 'State of Grace'."
     },
     {
@@ -65,11 +65,11 @@
       "question": "Which of the following songs is NOT from the 'Lover' album?",
       "options": {
         "A": "You Need To Calm Down",
-        "B": "Me!",
-        "C": "Delicate",
-        "D": "The Man"
+        "B": "Delicate",
+        "C": "The Man",
+        "D": "Me!"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "'Delicate' is a song from Taylor Swift's 'Reputation' album, not 'Lover'."
     },
     {
@@ -89,23 +89,23 @@
       "question": "Which of the following albums was released first?",
       "options": {
         "A": "Speak Now",
-        "B": "Fearless",
-        "C": "Reputation",
-        "D": "1989"
+        "B": "1989",
+        "C": "Fearless",
+        "D": "Reputation"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "'Fearless' was released in 2008 and is Taylor Swift's second studio album."
     },
     {
       "topic": "Taylor Swift",
       "question": "Which actor appeared as Taylor's love interest in the 'We Are Never Ever Getting Back Together' music video?",
       "options": {
-        "A": "Noah Mills",
+        "A": "Sean O'Pry",
         "B": "Toby Hemingway",
-        "C": "Brandon Routh",
-        "D": "Sean O'Pry"
+        "C": "Noah Mills",
+        "D": "Brandon Routh"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "Noah Mills appeared as Taylor's love interest in the 'We Are Never Ever Getting Back Together' music video."
     },
     {
@@ -114,22 +114,22 @@
       "options": {
         "A": "Jake Gyllenhaal",
         "B": "Joe Jonas",
-        "C": "John Mayer",
-        "D": "Taylor Lautner"
+        "C": "Taylor Lautner",
+        "D": "John Mayer"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "'Back To December' is rumored to be about Taylor Lautner."
     },
     {
       "topic": "Taylor Swift",
       "question": "What is the name of Taylor Swift's first album?",
       "options": {
-        "A": "Taylor Swift",
-        "B": "Fearless",
-        "C": "Red",
+        "A": "Red",
+        "B": "Taylor Swift",
+        "C": "Fearless",
         "D": "Speak Now"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": "Taylor Swift's first album, released in 2006, is self-titled 'Taylor Swift'."
     },
     {
@@ -138,10 +138,10 @@
       "options": {
         "A": "2018",
         "B": "2021",
-        "C": "2020",
-        "D": "2019"
+        "C": "2019",
+        "D": "2020"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "Taylor Swift received the Billboard Woman of the Decade Award in 2019."
     },
     {
@@ -149,23 +149,23 @@
       "question": "Which song features the lyric 'Cause the players gonna play, play, play'?",
       "options": {
         "A": "Love Story",
-        "B": "Shake It Off",
-        "C": "Red",
-        "D": "22"
+        "B": "22",
+        "C": "Shake It Off",
+        "D": "Red"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "The lyric 'Cause the players gonna play, play, play' is from the song 'Shake It Off'."
     },
     {
       "topic": "Taylor Swift",
       "question": "Who did Taylor Swift collaborate with on the song 'End Game'?",
       "options": {
-        "A": "Kendrick Lamar",
-        "B": "Ed Sheeran and Future",
+        "A": "Brendon Urie",
+        "B": "Kendrick Lamar",
         "C": "Zayn Malik",
-        "D": "Brendon Urie"
+        "D": "Ed Sheeran and Future"
       },
-      "answer": "B",
+      "answer": "D",
       "explanation": "Taylor Swift collaborated with Ed Sheeran and Future on the song 'End Game'."
     }
   ]

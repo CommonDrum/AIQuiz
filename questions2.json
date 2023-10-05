@@ -4,12 +4,12 @@
       "topic": "Taylor Swift",
       "question": "Which album includes the hit song 'Love Story'?",
       "options": {
-        "A": "1989",
-        "B": "Fearless",
+        "A": "Fearless",
+        "B": "1989",
         "C": "Reputation",
         "D": "Red"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "'Love Story' is one of the hit songs from Taylor Swift's second studio album, 'Fearless', released in 2008."
     },
     {
@@ -17,23 +17,23 @@
       "question": "What is Taylor Swift's middle name?",
       "options": {
         "A": "Ashley",
-        "B": "Amanda",
-        "C": "Alison",
+        "B": "Alison",
+        "C": "Amanda",
         "D": "Andrea"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "Taylor Swift's middle name is Alison."
     },
     {
       "topic": "Taylor Swift",
       "question": "Which Taylor Swift album was released in 2014?",
       "options": {
-        "A": "1989",
-        "B": "Fearless",
+        "A": "Fearless",
+        "B": "1989",
         "C": "Speak Now",
         "D": "Red"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": "'1989' is Taylor Swift's fifth studio album, released on October 27, 2014."
     },
     {
@@ -53,11 +53,11 @@
       "question": "What is the first track on the 'Red (Taylor’s Version)' album?",
       "options": {
         "A": "Red",
-        "B": "I Knew You Were Trouble",
+        "B": "State of Grace",
         "C": "22",
-        "D": "State of Grace"
+        "D": "I Knew You Were Trouble"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "The first track on the 'Red (Taylor’s Version)' album is 'State of Grace'."
     },
     {
@@ -65,11 +65,11 @@
       "question": "Which of the following songs is NOT from the 'Lover' album?",
       "options": {
         "A": "You Need To Calm Down",
-        "B": "Me!",
-        "C": "Delicate",
+        "B": "Delicate",
+        "C": "Me!",
         "D": "The Man"
       },
-      "answer": "C",
+      "answer": "B",
       "explanation": "'Delicate' is a song from Taylor Swift's 'Reputation' album, not 'Lover'."
     },
     {
@@ -77,23 +77,23 @@
       "question": "Who did Taylor Swift collaborate with on the song 'Exile'?",
       "options": {
         "A": "Ed Sheeran",
-        "B": "Bon Iver",
-        "C": "The Civil Wars",
+        "B": "The Civil Wars",
+        "C": "Bon Iver",
         "D": "Gary Lightbody"
       },
-      "answer": "B",
+      "answer": "C",
       "explanation": "Taylor Swift collaborated with Bon Iver on the song 'Exile'."
     },
     {
       "topic": "Taylor Swift",
       "question": "Which of the following albums was released first?",
       "options": {
-        "A": "Speak Now",
-        "B": "Fearless",
+        "A": "Fearless",
+        "B": "Speak Now",
         "C": "Reputation",
         "D": "1989"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "'Fearless' was released in 2008 and is Taylor Swift's second studio album."
     },
     {
@@ -114,58 +114,58 @@
       "options": {
         "A": "Jake Gyllenhaal",
         "B": "Joe Jonas",
-        "C": "John Mayer",
-        "D": "Taylor Lautner"
+        "C": "Taylor Lautner",
+        "D": "John Mayer"
       },
-      "answer": "D",
+      "answer": "C",
       "explanation": "'Back To December' is rumored to be about Taylor Lautner."
     },
     {
       "topic": "Taylor Swift",
       "question": "What is the name of Taylor Swift's first album?",
       "options": {
-        "A": "Taylor Swift",
-        "B": "Fearless",
+        "A": "Fearless",
+        "B": "Taylor Swift",
         "C": "Red",
         "D": "Speak Now"
       },
-      "answer": "A",
+      "answer": "B",
       "explanation": "Taylor Swift's first album, released in 2006, is self-titled 'Taylor Swift'."
     },
     {
       "topic": "Taylor Swift",
       "question": "In which year did Taylor Swift receive the Billboard Woman of the Decade Award?",
       "options": {
-        "A": "2018",
+        "A": "2019",
         "B": "2021",
         "C": "2020",
-        "D": "2019"
+        "D": "2018"
       },
-      "answer": "D",
+      "answer": "A",
       "explanation": "Taylor Swift received the Billboard Woman of the Decade Award in 2019."
     },
     {
       "topic": "Taylor Swift",
       "question": "Which song features the lyric 'Cause the players gonna play, play, play'?",
       "options": {
-        "A": "Love Story",
-        "B": "Shake It Off",
+        "A": "Shake It Off",
+        "B": "Love Story",
         "C": "Red",
         "D": "22"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "The lyric 'Cause the players gonna play, play, play' is from the song 'Shake It Off'."
     },
     {
       "topic": "Taylor Swift",
       "question": "Who did Taylor Swift collaborate with on the song 'End Game'?",
       "options": {
-        "A": "Kendrick Lamar",
-        "B": "Ed Sheeran and Future",
+        "A": "Ed Sheeran and Future",
+        "B": "Kendrick Lamar",
         "C": "Zayn Malik",
         "D": "Brendon Urie"
       },
-      "answer": "B",
+      "answer": "A",
       "explanation": "Taylor Swift collaborated with Ed Sheeran and Future on the song 'End Game'."
     }
   ]

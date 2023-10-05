@@ -60,6 +60,7 @@ func StartQuiz(quiz Quiz, isAppLoopRunning *bool) {
 			isRunning = false
 
 		case "a", "b", "c", "d":
+
 			questionCheck(input, currentQuestion)
 
 		default:
