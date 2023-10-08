@@ -1,954 +1,952 @@
 {
-    "questions": [
-    
-
-        {
-          "topic": "Design Secure Architectures",
-          "question": "A company stores sensitive user data in an Amazon S3 bucket. How can the Solutions Architect ensure that the data is encrypted at rest?",
-          "options": {
-            "A": "Enable AWS Shield on the S3 bucket",
-            "B": "Enable Server-Side Encryption (SSE) on the S3 bucket",
-            "C": "Enable AWS WAF for the S3 bucket",
-            "D": "Enable Amazon S3 VPC Endpoint"
-          },
-          "answer": "B",
-          "explanation": "Server-Side Encryption (SSE) in Amazon S3 encrypts data at rest and automatically decrypts it when it's retrieved, providing protection for the stored data."
-        },
-        {
-          "topic": "Design Secure Architectures",
-          "question": "A Solutions Architect needs to design a solution where EC2 instances should only be launched with approved AMIs. How can the Architect meet this requirement?",
-          "options": {
-            "A": "Use AWS Config to evaluate the instances against desired settings",
-            "B": "Use AWS Inspector to approve AMIs",
-            "C": "Implement AWS Shield",
-            "D": "Implement an S3 bucket policy"
-          },
-          "answer": "A",
-          "explanation": "AWS Config can be utilized to ensure compliance and manage configuration rules, enabling the Solutions Architect to enforce the use of specific, approved AMIs."
-        },
-        {
-          "topic": "Design Secure Architectures",
-          "question": "An application requires a key management infrastructure to handle cryptographic functions. The Solution Architect needs to ensure the keys are managed securely. Which AWS service should be used?",
-          "options": {
-            "A": "AWS KMS",
-            "B": "Amazon Macie",
-            "C": "AWS Secrets Manager",
-            "D": "Amazon Inspector"
-          },
-          "answer": "A",
-          "explanation": "AWS Key Management Service (KMS) enables you to create, control, and manage cryptographic keys in AWS, ensuring secure access to data and services."
-        },
-        {
-          "topic": "Design Secure Architectures",
-          "question": "An application deployed in a VPC needs secure access to Amazon DynamoDB without being exposed to the public internet. How can this be achieved?",
-          "options": {
-            "A": "Use a VPC peering connection",
-            "B": "Use a VPC Endpoint for DynamoDB",
-            "C": "Use AWS Direct Connect",
-            "D": "Expose DynamoDB through an API Gateway"
-          },
-          "answer": "B",
-          "explanation": "VPC Endpoints for DynamoDB enable private connections between your VPC and DynamoDB, securely connecting your VPC to DynamoDB without traversing the internet."
-        },
-        {
-          "topic": "Design Secure Architectures",
-          "question": "A company is using AWS Organizations with multiple accounts. The Security team should be able to audit all AWS API calls across all accounts. How can this be efficiently implemented?",
-          "options": {
-            "A": "Use AWS CloudTrail with an organization trail",
-            "B": "Enable AWS GuardDuty in each account",
-            "C": "Enable AWS Config in each account",
-            "D": "Set up an Amazon CloudWatch Events rule in each account"
-          },
-          "answer": "A",
-          "explanation": "AWS CloudTrail with an organization trail allows you to log, continuously monitor, and retain account activity related to actions across your entire AWS infrastructure, providing a consolidated log stream to audit and review account activity."
-        },
-        {
-            "topic": "Design Secure Architectures",
-            "question": "A company needs to securely manage secrets and sensitive information such as API keys, database credentials, and certificates for their applications. Which AWS service is recommended?",
-            "options": {
-              "A": "AWS Key Management Service (KMS)",
-              "B": "AWS Secrets Manager",
-              "C": "Amazon S3",
-              "D": "AWS Config"
-            },
-            "answer": "B",
-            "explanation": "AWS Secrets Manager helps you protect access to your applications, services, and IT resources without the upfront investment and on-premises maintenance of traditional infrastructure. Secrets Manager enables you to rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your company stores critical financial data in an S3 bucket. You are tasked with ensuring that this data is not accidentally deleted or overwritten. Which features should be implemented?",
-            "options": {
-              "A": "Versioning and MFA-Delete",
-              "B": "AWS WAF and AWS Shield",
-              "C": "Bucket Policy and IAM Policy",
-              "D": "S3 Transfer Acceleration"
-            },
-            "answer": "A",
-            "explanation": "Enabling versioning on your S3 bucket keeps multiple versions of an object in the bucket, protecting you from the consequences of accidental deletion or overwrite. MFA-Delete (Multi-Factor Authentication Delete) adds an additional layer of security by requiring multi-factor authentication to delete an object version or change the versioning state of the bucket."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A Solutions Architect needs to design a mechanism to alert the security team when unauthorized API calls are made in the AWS environment. What approach should be implemented?",
-            "options": {
-              "A": "Use Amazon CloudWatch Alarms with AWS CloudTrail",
-              "B": "Enable versioning on Amazon S3",
-              "C": "Use AWS WAF with Amazon CloudFront",
-              "D": "Enable AWS Shield Advanced"
-            },
-            "answer": "A",
-            "explanation": "AWS CloudTrail logs API calls made in the AWS environment. By creating Amazon CloudWatch Alarms based on certain API call patterns or parameters (such as unauthorized or denied actions), you can send notifications or automatically make changes to the resources you are monitoring when a threshold is breached."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your company requires to ensure that all EC2 instances are compliant with PCI DSS. Which service will help in achieving this requirement by continuously assessing the environment?",
-            "options": {
-              "A": "AWS Config",
-              "B": "AWS Trusted Advisor",
-              "C": "Amazon Inspector",
-              "D": "AWS Shield"
-            },
-            "answer": "C",
-            "explanation": "Amazon Inspector automatically assesses applications for vulnerabilities against the predefined or custom security standards such as PCI DSS. It produces a detailed list of security findings prioritized by level of severity."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You need to configure an application to write data to an S3 bucket. Which approach should be used to securely provide credentials to the application while minimizing management overhead?",
-            "options": {
-              "A": "Hard code the credentials in the application code",
-              "B": "Store credentials in environment variables on EC2",
-              "C": "Use IAM roles for EC2",
-              "D": "Use Lambda environment variables"
-            },
-            "answer": "C",
-            "explanation": "IAM roles for EC2 instances allow applications to interface with other AWS services without the need to manage and store AWS credentials. Temporary credentials are automatically provided to the EC2 instance, and these credentials are rotated automatically."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A company wants to use an S3 bucket to store sensitive documents and needs to ensure that only specific IAM users can access the bucket. What should be done to restrict access?",
-            "options": {
-              "A": "Enable S3 bucket public access",
-              "B": "Apply an S3 bucket policy",
-              "C": "Enable S3 Transfer Acceleration",
-              "D": "Enable MFA-Delete"
-            },
-            "answer": "B",
-            "explanation": "An S3 bucket policy specifies what actions are allowed or denied by which principals on the bucket that the policy is attached to (e.g., allowing specific IAM users access)."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "How can you enforce encryption of data at rest on an EBS volume attached to an EC2 instance?",
-            "options": {
-              "A": "Use AWS KMS to encrypt the volume",
-              "B": "Enable EBS encryption when creating the volume",
-              "C": "Use S3 bucket policies",
-              "D": "Encrypt data using EC2 Instance Metadata"
-            },
-            "answer": "B",
-            "explanation": "EBS volumes can be encrypted at the time of creation, ensuring that data at rest, I/O operations between instances and volumes, and snapshots created from the volume are all encrypted."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which service can provide a detailed audit trail of AWS resource history to help with security audits, compliance monitoring, and governance of the environment?",
-            "options": {
-              "A": "AWS CloudTrail",
-              "B": "Amazon CloudWatch",
-              "C": "AWS Config",
-              "D": "Amazon Inspector"
-            },
-            "answer": "A",
-            "explanation": "AWS CloudTrail records API calls made on your account, providing a detailed audit trail of changes to AWS resources and user activity to assist with security audits, compliance monitoring, and governance."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "How can an organization protect their AWS account from being used by a malicious actor if the root account credentials are exposed?",
-            "options": {
-              "A": "Use MFA for the root account",
-              "B": "Use IAM user instead of root",
-              "C": "Both A and B",
-              "D": "None of the above"
-            },
-            "answer": "C",
-            "explanation": "Multi-Factor Authentication (MFA) adds an extra layer of protection on the root account and using IAM users for everyday tasks instead of the root account follows AWS best practices for security."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which AWS service helps manage keys for encryption, allows for policy control over the use of keys, and is integrated with other AWS services to help protect data?",
-            "options": {
-              "A": "AWS Key Management Service (KMS)",
-              "B": "AWS Secrets Manager",
-              "C": "AWS Config",
-              "D": "Amazon Macie"
-            },
-            "answer": "A",
-            "explanation": "AWS Key Management Service (KMS) allows for the creation and management of encryption keys and is integrated with other AWS services to protect data across services."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which service would a Solutions Architect use to detect and categorize sensitive data, such as Personally Identifiable Information (PII)?",
-            "options": {
-              "A": "Amazon Macie",
-              "B": "AWS Secrets Manager",
-              "C": "AWS Config",
-              "D": "Amazon CloudWatch"
-            },
-            "answer": "A",
-            "explanation": "Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data like PII. It recognizes sensitive data such as personal API keys and secret keys, and provides dashboards and alerts."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "To securely store database connection strings and secrets for your Lambda function, which AWS service can be integrated?",
-            "options": {
-              "A": "AWS Secrets Manager",
-              "B": "AWS CloudTrail",
-              "C": "Amazon CloudSearch",
-              "D": "Amazon Macie"
-            },
-            "answer": "A",
-            "explanation": "AWS Secrets Manager helps you to securely encrypt, store, and retrieve credentials for databases and other services. Integrating this with AWS Lambda enables your function to access these secrets securely."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your organization is deploying a web application and wants to ensure that Distributed Denial of Service (DDoS) attacks are mitigated. Which AWS service should be implemented?",
-            "options": {
-              "A": "Amazon Inspector",
-              "B": "AWS WAF",
-              "C": "AWS Shield",
-              "D": "AWS Macie"
-            },
-            "answer": "C",
-            "explanation": "AWS Shield provides managed DDoS protection to safeguard applications running on AWS. AWS Shield provides always-on detection and automatic inline mitigations to minimize application downtime and latency."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which method allows for secure user sign-up, sign-in, and access control to your web and mobile apps using AWS Lambda and Amazon API Gateway?",
-            "options": {
-              "A": "Amazon Cognito",
-              "B": "AWS IAM",
-              "C": "AWS Key Management Service",
-              "D": "Amazon Macie"
-            },
-            "answer": "A",
-            "explanation": "Amazon Cognito allows you to create a secure user directory that scales up to hundreds of millions of users. It's a fully managed service connecting easily to web or mobile apps through an SDK."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "In a multi-account AWS environment, which service would enable centralized logging of API activity across all accounts?",
-            "options": {
-              "A": "Amazon CloudWatch",
-              "B": "AWS CloudTrail",
-              "C": "AWS Config",
-              "D": "Amazon Inspector"
-            },
-            "answer": "B",
-            "explanation": "AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your entire AWS infrastructure."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which AWS service would assist in managing keys for encryption and control use across AWS services?",
-            "options": {
-              "A": "AWS Key Management Service (KMS)",
-              "B": "AWS CloudHSM",
-              "C": "AWS Secrets Manager",
-              "D": "A and B"
-            },
-            "answer": "D",
-            "explanation": "Both AWS Key Management Service (KMS) and AWS CloudHSM help in managing cryptographic keys for your applications. KMS is fully managed and helps you create and control the encryption keys used to encrypt your data. AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to generate and use your own encryption keys."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which AWS service provides a Virtual Private Cloud (VPC) peering connection to help securely access services?",
-            "options": {
-              "A": "AWS PrivateLink",
-              "B": "Amazon CloudFront",
-              "C": "AWS Direct Connect",
-              "D": "AWS Transit Gateway"
-            },
-            "answer": "A",
-            "explanation": "AWS PrivateLink simplifies the security of data shared with cloud-based applications by eliminating the exposure of data to the public Internet. AWS PrivateLink provides private connectivity between VPCs, AWS services, and on-premises applications, securely on the Amazon network."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which AWS service allows organizations to create and manage users and groups and use permissions to allow and deny access to AWS resources?",
-            "options": {
-              "A": "AWS IAM",
-              "B": "AWS Organizations",
-              "C": "AWS SSO",
-              "D": "Amazon Macie"
-            },
-            "answer": "A",
-            "explanation": "AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups and use permissions to allow and deny their access to AWS resources."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A client has requested the setup of a resilient web application with confidential data. How would you protect against DDoS attacks and secure data transmissions?",
-            "options": {
-              "A": "Implement AWS Shield and use AWS KMS for data encryption",
-              "B": "Utilize Amazon Macie and AWS CloudTrail",
-              "C": "Use AWS Shield Advanced and ensure data transmission over HTTPS",
-              "D": "Enable MFA for all IAM users"
-            },
-            "answer": "C",
-            "explanation": "AWS Shield Advanced provides enhanced DDoS protection for web applications. Ensuring data transmission over HTTPS provides a secure channel, preventing eavesdropping and securing data in transit."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A media company is leveraging Amazon S3 to store their high-definition video files. They want to securely share S3 objects with specific external vendors without making the objects public. What would be an appropriate solution?",
-            "options": {
-              "A": "Create a signed URL for objects using S3 pre-signed URLs",
-              "B": "Enable public access for the required S3 objects",
-              "C": "Utilize AWS Config to monitor and act on non-compliant resources",
-              "D": "Use AWS Lambda to replicate data into vendor accounts"
-            },
-            "answer": "A",
-            "explanation": "S3 pre-signed URLs provide secure, temporary access to S3 objects without requiring IAM permissions. A signed URL, valid for a specified period, allows secure object sharing with external entities."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "An e-commerce application stores sensitive customer data and uses multiple AWS services. How should a Solutions Architect ensure that API calls to AWS services are audited and monitored for security analysis?",
-            "options": {
-              "A": "Use AWS Secrets Manager to rotate keys",
-              "B": "Utilize AWS CloudTrail to log, monitor, and retain API calls",
-              "C": "Implement AWS Config for auditing API calls",
-              "D": "Use AWS SSO to simplify user access to AWS services"
-            },
-            "answer": "B",
-            "explanation": "AWS CloudTrail provides event history of AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, and command-line tools. It allows auditing and monitoring of API calls across AWS services, aiding in security analysis."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A financial firm processes critical transaction data and is required to comply with regulatory standards for data at rest encryption, key management, and auditability. Which services would collectively meet these requirements?",
-            "options": {
-              "A": "Amazon RDS with TDE, AWS CloudTrail, and AWS KMS",
-              "B": "Amazon CloudFront, Amazon S3 with SSE, and AWS CloudTrail",
-              "C": "AWS Lambda, AWS KMS, and AWS Shield",
-              "D": "Amazon Macie, AWS WAF, and Amazon CloudSearch"
-            },
-            "answer": "A",
-            "explanation": "Amazon RDS with Transparent Data Encryption (TDE) encrypts data at rest, AWS CloudTrail provides logging and auditing capabilities, and AWS Key Management Service (KMS) manages cryptographic keys, aligning with regulatory standards for sensitive financial data."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your company stores sensitive user data in an Amazon RDS instance. To comply with regulatory requirements, how can you automatically discover and classify this sensitive data?",
-            "options": {
-              "A": "Use AWS CloudTrail with Amazon SNS notifications",
-              "B": "Utilize Amazon Macie",
-              "C": "Implement AWS Secrets Manager",
-              "D": "Use Amazon GuardDuty"
-            },
-            "answer": "B",
-            "explanation": "Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data like Personally Identifiable Information (PII). Macie can help fulfill compliance needs by identifying and securing sensitive data stored in Amazon S3."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You have an application running in an Amazon VPC that needs to securely access a service outside of AWS. The data must not traverse the public internet. What should you do to achieve this?",
-            "options": {
-              "A": "Set up VPC Peering",
-              "B": "Utilize AWS Direct Connect",
-              "C": "Implement a NAT Gateway",
-              "D": "Use an AWS Transit Gateway"
-            },
-            "answer": "B",
-            "explanation": "AWS Direct Connect allows for a private, secure connection between your VPC and your own data center or corporate network, ensuring that the data does not traverse the public internet, fulfilling security and compliance requirements."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A gaming company uses an Auto Scaling group to manage EC2 instances hosting a multiplayer game. Suddenly, there's an unexpected surge in usage, and new EC2 instances are not launching. What might be a viable solution to investigate?",
-            "options": {
-              "A": "Review and potentially increase the AWS Service Quotas for EC2 instances",
-              "B": "Switch to a different instance type",
-              "C": "Remove all inbound rules in the security group",
-              "D": "Disable the Auto Scaling group"
-            },
-            "answer": "A",
-            "explanation": "Service Quotas in AWS define the limits for resources, actions, and items in your AWS account. Reviewing and potentially increasing the quotas for EC2 instances would allow more instances to be launched to handle the increased load."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You've set up AWS CloudTrail with an S3 bucket to store logs. For additional security, which practice would give the security team immediate access to analyze and act upon any API call that modifies VPC Security Groups?",
-            "options": {
-              "A": "Create a CloudWatch Alarm for VPC modifications and send notifications to SNS",
-              "B": "Use AWS Config to audit Security Group changes",
-              "C": "Store CloudTrail logs in an EBS volume and share it",
-              "D": "Enable AWS Shield Advanced"
-            },
-            "answer": "A",
-            "explanation": "Creating Amazon CloudWatch Alarms that monitor for specific API calls (like those modifying VPC Security Groups) and then sending notifications with Amazon SNS allows the security team to be immediately informed of changes and to take quick action."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You are tasked to securely manage and rotate database secrets for applications running on ECS. Which AWS service would you leverage?",
-            "options": {
-              "A": "AWS Key Management Service",
-              "B": "AWS Secrets Manager",
-              "C": "Amazon Macie",
-              "D": "AWS Certificate Manager"
-            },
-            "answer": "B",
-            "explanation": "AWS Secrets Manager helps you to protect access to your applications, services, and IT resources without the upfront investment and on-premises maintenance of traditional infrastructure. Secrets Manager enables you to rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A multi-national company needs to store customer data compliant with regional data protection regulations. How can you ensure that data stored in S3 is kept within specified geographical regions?",
-            "options": {
-              "A": "Utilize AWS CloudHSM",
-              "B": "Enable S3 Transfer Acceleration",
-              "C": "Configure S3 bucket policies for region restrictions",
-              "D": "Use Amazon Macie"
-            },
-            "answer": "C",
-            "explanation": "S3 bucket policies can be configured to enforce region compliance by denying operations in non-compliant regions, ensuring data residency requirements are adhered to."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "How can you securely enable developers to access and interact with AWS services, without storing AWS credentials on a development machine?",
-            "options": {
-              "A": "Use AWS IAM roles with EC2 instances",
-              "B": "Embed IAM user credentials in code",
-              "C": "Use AWS KMS for credential storage",
-              "D": "Store credentials in Amazon RDS"
-            },
-            "answer": "A",
-            "explanation": "IAM roles for EC2 instances allow applications running on the instance to interact with AWS services using permissions attached to the role. Credentials are automatically provided via the instance metadata, negating the need to store them with the application."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "An organization is using AWS CloudTrail for auditing purposes. They need to ensure the integrity of the logs. How can they achieve this?",
-            "options": {
-              "A": "Store CloudTrail logs in S3 and enable MFA Delete",
-              "B": "Send CloudTrail logs to CloudWatch Logs",
-              "C": "Use AWS Config to audit changes to CloudTrail",
-              "D": "Enable Log File Integrity Validation in CloudTrail"
-            },
-            "answer": "D",
-            "explanation": "Enabling Log File Integrity Validation in AWS CloudTrail provides an additional layer of security by delivering digitally signed files to your Amazon S3 bucket and allowing you to validate the integrity of the log files."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You need to provide a solution for storing sensitive customer data that adheres to regulatory compliance and audits. Which AWS service allows for hardware security module (HSM) clusters to be created, providing secure cryptographic key storage?",
-            "options": {
-              "A": "AWS CloudHSM",
-              "B": "AWS Key Management Service",
-              "C": "AWS Secrets Manager",
-              "D": "Amazon Macie"
-            },
-            "answer": "A",
-            "explanation": "AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud. It allows you to create HSM clusters, providing secure and compliant cryptographic key storage."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A healthcare application, deployed in a VPC, must restrict access to an RDS instance containing patient data, allowing only specific EC2 instances to connect. Which of the following practices enhances security for this setup?",
-            "options": {
-              "A": "Place RDS in a public subnet and use Security Groups to restrict access",
-              "B": "Place RDS in a private subnet and use Network ACLs for access control",
-              "C": "Use AWS Shield for RDS protection",
-              "D": "Place RDS and EC2 in a public subnet and use IAM policies for access control"
-            },
-            "answer": "B",
-            "explanation": "Placing the RDS instance in a private subnet and utilizing Network ACLs provides a secure layer by isolating the database from direct internet access and controlling traffic flow in and out of the subnet based on defined rules."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "A retail company using AWS Lambda to process user purchases wants to secure data at rest and in transit. Which combination of services/actions would help achieve this?",
-            "options": {
-              "A": "AWS WAF for data in transit, and S3 Server-Side Encryption (SSE) for data at rest",
-              "B": "AWS CloudHSM for data in transit, and AWS Config for data at rest",
-              "C": "AWS KMS for data at rest, and using HTTPS for data in transit",
-              "D": "AWS Direct Connect for data in transit, and EBS encryption for data at rest"
-            },
-            "answer": "C",
-            "explanation": "AWS KMS can be utilized to encrypt data at rest, and ensuring that data is sent over HTTPS (using TLS/SSL) secures it while in transit. This combination helps protect data throughout its lifecycle in the application."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You're creating a web application where users will upload videos. What is a secure way to allow users to upload files directly to S3?",
-            "options": {
-              "A": "Generate a pre-signed URL using IAM temporary credentials",
-              "B": "Use a permanent IAM user key to authenticate the upload",
-              "C": "Store AWS root account keys in the application code to allow upload access",
-              "D": "Place the S3 bucket in a public subnet and allow all traffic"
-            },
-            "answer": "A",
-            "explanation": "Pre-signed URLs provide a secure method to allow users to upload files directly to S3. By using IAM temporary credentials, the URLs are only valid for a specified duration and do not require exposing sensitive AWS credentials."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your solution must audit access and changes to AWS resources and provide a visual depiction to understand relationships and dependencies between them. Which AWS service can assist with this requirement?",
-            "options": {
-              "A": "AWS CloudTrail",
-              "B": "AWS Config",
-              "C": "Amazon CloudWatch",
-              "D": "AWS Trusted Advisor"
-            },
-            "answer": "B",
-            "explanation": "AWS Config records and evaluates configurations of your AWS resources. It allows you to audit access, visualize configurations, and see relationships and dependencies among resources, assisting in adhering to compliance requirements."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which AWS service can be used to protect web applications deployed on AWS from SQL injection and XSS attacks?",
-            "options": {
-              "A": "AWS WAF",
-              "B": "AWS Shield",
-              "C": "Amazon GuardDuty",
-              "D": "AWS Secrets Manager"
-            },
-            "answer": "A",
-            "explanation": "AWS WAF (Web Application Firewall) helps protect your web applications against common web exploits such as SQL injection and XSS attacks by allowing you to configure rules to filter, block, and monitor HTTP/HTTPS traffic."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "An organization is migrating its critical workloads to AWS and wants to ensure a resilient architecture against DDoS attacks. What service would provide DDoS mitigation and is designed to protect applications running on AWS?",
-            "options": {
-              "A": "AWS WAF",
-              "B": "Amazon Inspector",
-              "C": "AWS Shield",
-              "D": "AWS Macie"
-            },
-            "answer": "C",
-            "explanation": "AWS Shield provides managed Distributed Denial of Service (DDoS) protection to safeguard AWS applications. AWS Shield provides always-on detection and automatic inline mitigations that minimize application downtime and latency."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your company is developing a highly sensitive application, and regulatory requirements dictate that all data must be encrypted in transit and at rest. Which AWS service would allow you to centrally manage keys and cryptographic functions?",
-            "options": {
-              "A": "AWS Key Management Service (KMS)",
-              "B": "AWS CloudHSM",
-              "C": "AWS Secrets Manager",
-              "D": "AWS Identity and Access Management (IAM)"
-            },
-            "answer": "A",
-            "explanation": "AWS Key Management Service (KMS) is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data, and uses Hardware Security Modules (HSMs) to protect the security of your keys."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Which of the following options allows an organization to audit API calls made on their account, making it easier to ensure regulatory compliance?",
-            "options": {
-              "A": "AWS Config",
-              "B": "AWS CloudTrail",
-              "C": "Amazon GuardDuty",
-              "D": "AWS Trusted Advisor"
-            },
-            "answer": "B",
-            "explanation": "AWS CloudTrail allows you to monitor, log, and retain calls related to actions across your AWS infrastructure, thus providing a clear audit trail that can be used to ensure compliance with regulatory standards."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "You need to deploy an application securely on EC2 instances and must ensure only authorized personnel can SSH into the instances. Which security practice should you follow?",
-            "options": {
-              "A": "Allow all inbound traffic on port 22 in Security Group",
-              "B": "Restrict inbound traffic on port 22 to known IP addresses",
-              "C": "Disable SSH access to all EC2 instances",
-              "D": "Use only IAM roles for SSH access"
-            },
-            "answer": "B",
-            "explanation": "Restricting inbound traffic on port 22 (SSH) to known IP addresses in your Security Group minimizes the attack surface by ensuring only authorized IP addresses have SSH access to the EC2 instances."
-          },
-          {
-            "topic": "Design Secure Architectures",
-            "question": "Your application stores sensitive customer data in DynamoDB. How can you secure this data at rest?",
-            "options": {
-              "A": "Use IPSEC VPN for DynamoDB data",
-              "B": "Enable Transparent Data Encryption (TDE)",
-              "C": "Enable DynamoDB encryption at rest",
-              "D": "Store data in an encrypted EBS volume before writing to DynamoDB"
-            },
-            "answer": "C",
-            "explanation": "Enabling encryption at rest for an Amazon DynamoDB table adds another layer of data protection by securing your data from unauthorized access to the underlying storage."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "You need to ensure high availability for a web application. Which AWS service allows you to distribute incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones?",
-            "options": {
-              "A": "Amazon Route 53",
-              "B": "AWS Elastic Beanstalk",
-              "C": "Amazon CloudFront",
-              "D": "Amazon Elastic Load Balancer"
-            },
-            "answer": "D",
-            "explanation": "Amazon Elastic Load Balancer automatically distributes incoming application traffic across multiple targets, such as EC2 instances, and across multiple Availability Zones, thus enhancing the fault tolerance of your application."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which AWS service would you use to deploy a global application with low latency and high transfer speeds for your end-users?",
-            "options": {
-              "A": "Amazon S3",
-              "B": "Amazon CloudFront",
-              "C": "AWS Direct Connect",
-              "D": "Amazon Route 53"
-            },
-            "answer": "B",
-            "explanation": "Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A crucial web application is hosted in a single AWS region. To ensure business continuity in case of a region failure, what should be implemented?",
-            "options": {
-              "A": "Deploy the application in additional regions and use Amazon RDS Multi-AZ deployments",
-              "B": "Deploy the application in additional regions and use Amazon Route 53 for routing traffic",
-              "C": "Only use S3 Transfer Acceleration to minimize downtime",
-              "D": "Use AWS Snowball to transfer data to another region"
-            },
-            "answer": "B",
-            "explanation": "Deploying the application in multiple regions and utilizing Amazon Route 53 to route traffic to healthy regions ensures high availability and fault tolerance by providing failover capabilities in the event of a region failure."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To protect against data loss for critical data stored in Amazon RDS, which feature should be enabled?",
-            "options": {
-              "A": "AWS CloudTrail",
-              "B": "AWS DMS replication",
-              "C": "Automated backups",
-              "D": "Amazon RDS read replicas"
-            },
-            "answer": "C",
-            "explanation": "Enabling automated backups in Amazon RDS helps protect against data loss by automatically backing up your database in a DB instance. Backups can be used to restore your database instance."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To ensure a globally available application with the ability to handle peaks in user traffic, which combination of AWS services would be ideal?",
-            "options": {
-              "A": "AWS Lambda and Amazon API Gateway",
-              "B": "Amazon EC2 and Amazon VPC",
-              "C": "AWS Direct Connect and AWS VPN",
-              "D": "Amazon Redshift and Amazon RDS"
-            },
-            "answer": "A",
-            "explanation": "Combining AWS Lambda and Amazon API Gateway allows for serverless application deployment, automatically scaling with the number of requests. This combination can globally distribute the application and effectively handle variable traffic loads."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A multimedia company requires a storage solution for their large media files with immediate access whenever needed. Which AWS storage solution is most suitable for storing large amounts of data with instant accessibility?",
-            "options": {
-              "A": "Amazon Glacier",
-              "B": "Amazon S3",
-              "C": "AWS Snowball",
-              "D": "AWS Storage Gateway"
-            },
-            "answer": "B",
-            "explanation": "Amazon S3 provides scalable object storage with high durability and availability. It is suitable for storing large amounts of data and allows for instant access whenever the data is needed, making it suitable for storing large media files."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To achieve a fault-tolerant architecture for an RDS deployment which automatically replaces the failing DB instance and reduces downtime, which feature should you leverage?",
-            "options": {
-              "A": "Read Replicas",
-              "B": "Multi-AZ deployments",
-              "C": "Automated backups",
-              "D": "DB instance resizing"
-            },
-            "answer": "B",
-            "explanation": "Multi-AZ deployments for Amazon RDS provide high availability, failover support for DB instances, and automatically replace the failing DB instance, making it a suitable choice for production environments that require high uptime."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which AWS service will you use to mitigate the risk of service interruptions and to improve the reliability of applications by shifting traffic between multiple AWS resources?",
-            "options": {
-              "A": "Amazon Route 53",
-              "B": "Amazon CloudFront",
-              "C": "Amazon API Gateway",
-              "D": "AWS Elastic Beanstalk"
-            },
-            "answer": "A",
-            "explanation": "Amazon Route 53 is a scalable Domain Name System (DNS) web service designed to route end-user requests to endpoints in a globally distributed, low-latency manner. It can route traffic based upon multiple routing policies, ensuring high reliability and availability."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "How would you ensure that your application survives an Availability Zone (AZ) failure without any manual intervention?",
-            "options": {
-              "A": "Use a single, highly durable AZ",
-              "B": "Deploy across multiple regions",
-              "C": "Deploy across multiple AZs within a region",
-              "D": "Use AWS CloudFormation to redeploy"
-            },
-            "answer": "C",
-            "explanation": "Deploying your application across multiple Availability Zones (AZs) within a region allows your application to continue to operate despite the failure of an AZ. AWS services that are deployed across multiple AZs are designed to be resilient to AZ failures."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "You want to create a disaster recovery plan that allows for the rapid deployment of your applications to another AWS Region. Which AWS service would enable you to create and manage a collection of related AWS resources?",
-            "options": {
-              "A": "AWS Elastic Beanstalk",
-              "B": "AWS CloudFormation",
-              "C": "Amazon EC2 Auto Scaling",
-              "D": "AWS Config"
-            },
-            "answer": "B",
-            "explanation": "AWS CloudFormation allows you to use a template file to create and manage a collection of related AWS resources. By deploying CloudFormation templates in another region, you can quickly set up your applications in the event of a disaster."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A company wants to ensure that their mission-critical application is designed to handle AWS service disruptions and recover gracefully from them. Which design principle of the AWS Well-Architected Framework should be followed?",
-            "options": {
-              "A": "Implement loose coupling",
-              "B": "Use multiple Availability Zones",
-              "C": "Automate recovery",
-              "D": "All of the above"
-            },
-            "answer": "D",
-            "explanation": "All the mentioned principles - implementing loose coupling, using multiple Availability Zones, and automating recovery - are key principles for ensuring resilience against disruptions and are part of the AWS Well-Architected Framework."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To manage sudden spikes in traffic and maintain high availability, what should be implemented in front of Amazon EC2 instances?",
-            "options": {
-              "A": "Amazon RDS",
-              "B": "Amazon CloudFront",
-              "C": "Amazon Elastic Load Balancer",
-              "D": "AWS Lambda"
-            },
-            "answer": "C",
-            "explanation": "Amazon Elastic Load Balancer (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, handling varying loads and ensuring high availability and fault tolerance."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A company is storing critical business data in Amazon S3. What strategy should they employ to protect against accidental deletion of objects?",
-            "options": {
-              "A": "Enable versioning",
-              "B": "Use Amazon S3 Select",
-              "C": "Enable AWS Shield",
-              "D": "Use S3 Transfer Acceleration"
-            },
-            "answer": "A",
-            "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To ensure durability of data in Amazon S3, what does AWS recommend?",
-            "options": {
-              "A": "Storing data in multiple buckets",
-              "B": "Storing data redundantly across multiple Availability Zones",
-              "C": "Storing data in a single, highly durable Availability Zone",
-              "D": "Encrypting data at rest"
-            },
-            "answer": "B",
-            "explanation": "To ensure durability, Amazon S3 automatically stores your data redundantly across multiple geographically separated Availability Zones (AZs) to protect it from loss due to failure of any single computing resource."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which service would help in distributing incoming SSH traffic to EC2 instances across multiple Availability Zones?",
-            "options": {
-              "A": "Amazon Route 53",
-              "B": "Amazon S3 Transfer Acceleration",
-              "C": "Network Load Balancer",
-              "D": "AWS CloudTrail"
-            },
-            "answer": "C",
-            "explanation": "Network Load Balancer (NLB) is designed to handle TCP traffic and is capable of handling millions of requests per second while maintaining ultra-low latencies. It can distribute incoming SSH traffic among EC2 instances across multiple Availability Zones."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A company is using Amazon S3 to store critical business data. To ensure that the data is not lost due to accidental deletion, what should be enabled?",
-            "options": {
-              "A": "S3 Transfer Acceleration",
-              "B": "S3 Select",
-              "C": "S3 Versioning",
-              "D": "S3 Cross-Region Replication"
-            },
-            "answer": "C",
-            "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A company is using Amazon S3 to store critical business data. To ensure that the data is not lost due to accidental deletion, what should be enabled?",
-            "options": {
-              "A": "S3 Transfer Acceleration",
-              "B": "S3 Select",
-              "C": "S3 Versioning",
-              "D": "S3 Cross-Region Replication"
-            },
-            "answer": "C",
-            "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A company is using Amazon S3 to store critical business data. To ensure that the data is not lost due to accidental deletion, what should be enabled?",
-            "options": {
-              "A": "S3 Transfer Acceleration",
-              "B": "S3 Select",
-              "C": "S3 Versioning",
-              "D": "S3 Cross-Region Replication"
-            },
-            "answer": "C",
-            "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which of the following services would be useful to maintain the seamless functionality of an application in case of a failure of one component, by redirecting traffic away from the affected component?",
-            "options": {
-              "A": "Amazon CloudFront",
-              "B": "AWS Elastic Beanstalk",
-              "C": "Amazon Route 53",
-              "D": "Amazon S3"
-            },
-            "answer": "C",
-            "explanation": "Amazon Route 53 helps to redirect traffic to healthy endpoints and can check the health of your application and its endpoints over the internet and reroute traffic to healthy endpoints in case of a failure."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "For an application requiring a file system with the capability to scale to petabytes of data which can be accessed by tens of thousands of EC2 instances concurrently, which AWS service should be utilized?",
-            "options": {
-              "A": "Amazon EFS",
-              "B": "Amazon S3",
-              "C": "Amazon EBS",
-              "D": "AWS Storage Gateway"
-            },
-            "answer": "A",
-            "explanation": "Amazon Elastic File System (EFS) is designed to provide massively parallel shared access to thousands of Amazon EC2 instances, enabling your applications to achieve high levels of aggregate throughput and IOPS with low-latency access to data."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which AWS service would provide a managed backup solution that supports policies to back up data across AWS services?",
-            "options": {
-              "A": "AWS Backup",
-              "B": "AWS CloudTrail",
-              "C": "Amazon CloudWatch",
-              "D": "AWS Snowball"
-            },
-            "answer": "A",
-            "explanation": "AWS Backup is a fully managed backup service that makes it easy to centralize and automate the back up of data across AWS services. It allows you to set policies and helps to meet compliance requirements."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "How can you best ensure high availability and fault tolerance for Amazon RDS instances?",
-            "options": {
-              "A": "Use Multi-AZ deployments",
-              "B": "Use AWS Lambda for data replication",
-              "C": "Store RDS data in Amazon S3",
-              "D": "Use Amazon EFS for database storage"
-            },
-            "answer": "A",
-            "explanation": "Amazon RDS Multi-AZ deployments provide enhanced availability and durability for Database (DB) Instances, making them a fitting solution for production database workloads."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To reduce latency for global users accessing your application, which AWS service would distribute content to multiple edge locations worldwide?",
-            "options": {
-              "A": "AWS Global Accelerator",
-              "B": "Amazon CloudFront",
-              "C": "Amazon Route 53",
-              "D": "AWS Outposts"
-            },
-            "answer": "B",
-            "explanation": "Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds, using a network of edge locations around the world."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "A company wants to ensure that their Amazon RDS instance is not a single point of failure. What feature of Amazon RDS should be implemented to ensure high availability?",
-            "options": {
-              "A": "Read Replicas",
-              "B": "Automated backups",
-              "C": "Multi-AZ deployments",
-              "D": "Database snapshots"
-            },
-            "answer": "C",
-            "explanation": "Multi-AZ deployments for Amazon RDS provide high availability and failover support for DB instances. In case the primary DB instance fails, Amazon RDS automatically fails over to the standby instance."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which AWS service would you use to automatically distribute incoming application traffic across multiple targets, such as EC2 instances, in one or more Availability Zones?",
-            "options": {
-              "A": "Amazon Route 53",
-              "B": "AWS Shield",
-              "C": "Amazon Elastic Load Balancing",
-              "D": "AWS Auto Scaling"
-            },
-            "answer": "C",
-            "explanation": "Amazon Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To ensure your application survives the loss of an entire AWS Region, what would be an appropriate measure?",
-            "options": {
-              "A": "Deploy in multiple Availability Zones",
-              "B": "Deploy in a single Availability Zone with backup",
-              "C": "Deploy in multiple AWS Regions",
-              "D": "Utilize Amazon Glacier for data storage"
-            },
-            "answer": "C",
-            "explanation": "Deploying in multiple AWS Regions provides the highest level of fault tolerance, as it ensures your application remains available even if an entire AWS Region becomes unavailable."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "How can Amazon S3 lifecycle policies assist in implementing a backup and archival strategy?",
-            "options": {
-              "A": "By triggering AWS Lambda functions for backups",
-              "B": "By transitioning objects between storage classes and optionally deleting them",
-              "C": "By automatically creating EBS snapshots",
-              "D": "By replicating data to another AWS account"
-            },
-            "answer": "B",
-            "explanation": "Amazon S3 lifecycle policies can be used to transition objects between storage classes at defined time intervals, moving them from more expensive, frequently accessed storage to cheaper, infrequently accessed storage, and optionally deleting them."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which AWS service can synchronize data across different AWS Regions, enabling low-latency access to a globally distributed dataset?",
-            "options": {
-              "A": "Amazon S3 Transfer Acceleration",
-              "B": "Amazon S3 Cross-Region Replication",
-              "C": "AWS Global Accelerator",
-              "D": "Amazon DynamoDB Global Tables"
-            },
-            "answer": "D",
-            "explanation": "Amazon DynamoDB Global Tables enables your applications to read and write data with single-digit millisecond latency by automatically replicating and synchronizing tables across different AWS Regions."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "An organization is using AWS CloudFormation for infrastructure as code. They want to ensure rapid roll back in case of failures during stack creation. Which feature should they enable?",
-            "options": {
-              "A": "Rollback on failure",
-              "B": "AWS Config",
-              "C": "AWS CloudTrail logging",
-              "D": "Stack policy"
-            },
-            "answer": "A",
-            "explanation": "Enabling 'Rollback on failure' in AWS CloudFormation ensures that if stack creation fails, all AWS resources that were created are deleted, which helps in avoiding any potential costs or orphaned resources."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which AWS service can be employed to monitor the application and AWS resources and respond to system-wide performance changes?",
-            "options": {
-              "A": "Amazon CloudWatch",
-              "B": "Amazon CloudSearch",
-              "C": "AWS WAF",
-              "D": "Amazon Macie"
-            },
-            "answer": "A",
-            "explanation": "Amazon CloudWatch is a monitoring service for AWS resources and the applications you run on the AWS platform. It can be used to collect and track metrics, collect and monitor log files, and set alarms for resource and application health."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "To ensure minimal downtime during the maintenance and patching of Amazon RDS databases, which deployment configuration would be suitable?",
-            "options": {
-              "A": "Single-AZ Deployments",
-              "B": "Read Replicas",
-              "C": "Multi-AZ Deployments",
-              "D": "Database snapshots"
-            },
-            "answer": "C",
-            "explanation": "Multi-AZ deployments for Amazon RDS provide enhanced availability and durability during database maintenance tasks. AWS automatically updates the DNS endpoint to point to the standby replica in case of primary DB instance failure or maintenance."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "An application stores sensitive data in Amazon RDS and needs to maintain a strict RTO and RPO. Which strategy would provide a balance between high availability and cost-effectiveness?",
-            "options": {
-              "A": "Use an on-premises database for failover",
-              "B": "Use Amazon Aurora with Multi-Master",
-              "C": "Use Amazon RDS with a standby instance in another Region",
-              "D": "Use Amazon RDS Multi-AZ with automated backups"
-            },
-            "answer": "D",
-            "explanation": "Using Amazon RDS Multi-AZ deployments with automated backups ensures high availability by providing a standby replica in another Availability Zone and maintains backups for point-in-time recovery, balancing cost and reliability."
-          },
-          {
-            "topic": "Design Resilient Architectures",
-            "question": "Which of the following services will help in automating the provisioning and scaling of applications so that they can handle the additional load during traffic spikes?",
-            "options": {
-              "A": "AWS Auto Scaling",
-              "B": "AWS Elastic Beanstalk",
-              "C": "AWS Lambda",
-              "D": "All of the above"
-            },
-            "answer": "D",
-            "explanation": "All mentioned services, AWS Auto Scaling, AWS Elastic Beanstalk, and AWS Lambda can help manage and scale applications. Auto Scaling adjusts instances as needed, Elastic Beanstalk automates provisioning, and Lambda handles burstable workloads without provisioning servers."
-          }
-    ]      
+  "questions": [
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A company stores sensitive user data in an Amazon S3 bucket. How can the Solutions Architect ensure that the data is encrypted at rest?",
+      "options": {
+        "A": "Enable AWS Shield on the S3 bucket",
+        "B": "Enable AWS WAF for the S3 bucket",
+        "C": "Enable Server-Side Encryption (SSE) on the S3 bucket",
+        "D": "Enable Amazon S3 VPC Endpoint"
+      },
+      "answer": "C",
+      "explanation": "Server-Side Encryption (SSE) in Amazon S3 encrypts data at rest and automatically decrypts it when it's retrieved, providing protection for the stored data."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A Solutions Architect needs to design a solution where EC2 instances should only be launched with approved AMIs. How can the Architect meet this requirement?",
+      "options": {
+        "A": "Use AWS Inspector to approve AMIs",
+        "B": "Use AWS Config to evaluate the instances against desired settings",
+        "C": "Implement AWS Shield",
+        "D": "Implement an S3 bucket policy"
+      },
+      "answer": "B",
+      "explanation": "AWS Config can be utilized to ensure compliance and manage configuration rules, enabling the Solutions Architect to enforce the use of specific, approved AMIs."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "An application requires a key management infrastructure to handle cryptographic functions. The Solution Architect needs to ensure the keys are managed securely. Which AWS service should be used?",
+      "options": {
+        "A": "Amazon Macie",
+        "B": "Amazon Inspector",
+        "C": "AWS Secrets Manager",
+        "D": "AWS KMS"
+      },
+      "answer": "D",
+      "explanation": "AWS Key Management Service (KMS) enables you to create, control, and manage cryptographic keys in AWS, ensuring secure access to data and services."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "An application deployed in a VPC needs secure access to Amazon DynamoDB without being exposed to the public internet. How can this be achieved?",
+      "options": {
+        "A": "Use a VPC Endpoint for DynamoDB",
+        "B": "Use AWS Direct Connect",
+        "C": "Use a VPC peering connection",
+        "D": "Expose DynamoDB through an API Gateway"
+      },
+      "answer": "A",
+      "explanation": "VPC Endpoints for DynamoDB enable private connections between your VPC and DynamoDB, securely connecting your VPC to DynamoDB without traversing the internet."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A company is using AWS Organizations with multiple accounts. The Security team should be able to audit all AWS API calls across all accounts. How can this be efficiently implemented?",
+      "options": {
+        "A": "Enable AWS GuardDuty in each account",
+        "B": "Use AWS CloudTrail with an organization trail",
+        "C": "Enable AWS Config in each account",
+        "D": "Set up an Amazon CloudWatch Events rule in each account"
+      },
+      "answer": "B",
+      "explanation": "AWS CloudTrail with an organization trail allows you to log, continuously monitor, and retain account activity related to actions across your entire AWS infrastructure, providing a consolidated log stream to audit and review account activity."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A company needs to securely manage secrets and sensitive information such as API keys, database credentials, and certificates for their applications. Which AWS service is recommended?",
+      "options": {
+        "A": "AWS Key Management Service (KMS)",
+        "B": "AWS Config",
+        "C": "Amazon S3",
+        "D": "AWS Secrets Manager"
+      },
+      "answer": "D",
+      "explanation": "AWS Secrets Manager helps you protect access to your applications, services, and IT resources without the upfront investment and on-premises maintenance of traditional infrastructure. Secrets Manager enables you to rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your company stores critical financial data in an S3 bucket. You are tasked with ensuring that this data is not accidentally deleted or overwritten. Which features should be implemented?",
+      "options": {
+        "A": "Bucket Policy and IAM Policy",
+        "B": "AWS WAF and AWS Shield",
+        "C": "S3 Transfer Acceleration",
+        "D": "Versioning and MFA-Delete"
+      },
+      "answer": "D",
+      "explanation": "Enabling versioning on your S3 bucket keeps multiple versions of an object in the bucket, protecting you from the consequences of accidental deletion or overwrite. MFA-Delete (Multi-Factor Authentication Delete) adds an additional layer of security by requiring multi-factor authentication to delete an object version or change the versioning state of the bucket."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A Solutions Architect needs to design a mechanism to alert the security team when unauthorized API calls are made in the AWS environment. What approach should be implemented?",
+      "options": {
+        "A": "Use AWS WAF with Amazon CloudFront",
+        "B": "Enable versioning on Amazon S3",
+        "C": "Use Amazon CloudWatch Alarms with AWS CloudTrail",
+        "D": "Enable AWS Shield Advanced"
+      },
+      "answer": "C",
+      "explanation": "AWS CloudTrail logs API calls made in the AWS environment. By creating Amazon CloudWatch Alarms based on certain API call patterns or parameters (such as unauthorized or denied actions), you can send notifications or automatically make changes to the resources you are monitoring when a threshold is breached."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your company requires to ensure that all EC2 instances are compliant with PCI DSS. Which service will help in achieving this requirement by continuously assessing the environment?",
+      "options": {
+        "A": "AWS Config",
+        "B": "AWS Shield",
+        "C": "AWS Trusted Advisor",
+        "D": "Amazon Inspector"
+      },
+      "answer": "D",
+      "explanation": "Amazon Inspector automatically assesses applications for vulnerabilities against the predefined or custom security standards such as PCI DSS. It produces a detailed list of security findings prioritized by level of severity."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You need to configure an application to write data to an S3 bucket. Which approach should be used to securely provide credentials to the application while minimizing management overhead?",
+      "options": {
+        "A": "Hard code the credentials in the application code",
+        "B": "Use IAM roles for EC2",
+        "C": "Use Lambda environment variables",
+        "D": "Store credentials in environment variables on EC2"
+      },
+      "answer": "B",
+      "explanation": "IAM roles for EC2 instances allow applications to interface with other AWS services without the need to manage and store AWS credentials. Temporary credentials are automatically provided to the EC2 instance, and these credentials are rotated automatically."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A company wants to use an S3 bucket to store sensitive documents and needs to ensure that only specific IAM users can access the bucket. What should be done to restrict access?",
+      "options": {
+        "A": "Enable S3 bucket public access",
+        "B": "Enable S3 Transfer Acceleration",
+        "C": "Apply an S3 bucket policy",
+        "D": "Enable MFA-Delete"
+      },
+      "answer": "C",
+      "explanation": "An S3 bucket policy specifies what actions are allowed or denied by which principals on the bucket that the policy is attached to (e.g., allowing specific IAM users access)."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "How can you enforce encryption of data at rest on an EBS volume attached to an EC2 instance?",
+      "options": {
+        "A": "Use AWS KMS to encrypt the volume",
+        "B": "Enable EBS encryption when creating the volume",
+        "C": "Use S3 bucket policies",
+        "D": "Encrypt data using EC2 Instance Metadata"
+      },
+      "answer": "B",
+      "explanation": "EBS volumes can be encrypted at the time of creation, ensuring that data at rest, I/O operations between instances and volumes, and snapshots created from the volume are all encrypted."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which service can provide a detailed audit trail of AWS resource history to help with security audits, compliance monitoring, and governance of the environment?",
+      "options": {
+        "A": "AWS CloudTrail",
+        "B": "Amazon CloudWatch",
+        "C": "AWS Config",
+        "D": "Amazon Inspector"
+      },
+      "answer": "A",
+      "explanation": "AWS CloudTrail records API calls made on your account, providing a detailed audit trail of changes to AWS resources and user activity to assist with security audits, compliance monitoring, and governance."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "How can an organization protect their AWS account from being used by a malicious actor if the root account credentials are exposed?",
+      "options": {
+        "A": "Both A and B",
+        "B": "Use IAM user instead of root",
+        "C": "None of the above",
+        "D": "Use MFA for the root account"
+      },
+      "answer": "A",
+      "explanation": "Multi-Factor Authentication (MFA) adds an extra layer of protection on the root account and using IAM users for everyday tasks instead of the root account follows AWS best practices for security."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service helps manage keys for encryption, allows for policy control over the use of keys, and is integrated with other AWS services to help protect data?",
+      "options": {
+        "A": "Amazon Macie",
+        "B": "AWS Secrets Manager",
+        "C": "AWS Config",
+        "D": "AWS Key Management Service (KMS)"
+      },
+      "answer": "D",
+      "explanation": "AWS Key Management Service (KMS) allows for the creation and management of encryption keys and is integrated with other AWS services to protect data across services."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which service would a Solutions Architect use to detect and categorize sensitive data, such as Personally Identifiable Information (PII)?",
+      "options": {
+        "A": "AWS Secrets Manager",
+        "B": "Amazon Macie",
+        "C": "AWS Config",
+        "D": "Amazon CloudWatch"
+      },
+      "answer": "B",
+      "explanation": "Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data like PII. It recognizes sensitive data such as personal API keys and secret keys, and provides dashboards and alerts."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "To securely store database connection strings and secrets for your Lambda function, which AWS service can be integrated?",
+      "options": {
+        "A": "Amazon CloudSearch",
+        "B": "AWS CloudTrail",
+        "C": "AWS Secrets Manager",
+        "D": "Amazon Macie"
+      },
+      "answer": "C",
+      "explanation": "AWS Secrets Manager helps you to securely encrypt, store, and retrieve credentials for databases and other services. Integrating this with AWS Lambda enables your function to access these secrets securely."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your organization is deploying a web application and wants to ensure that Distributed Denial of Service (DDoS) attacks are mitigated. Which AWS service should be implemented?",
+      "options": {
+        "A": "Amazon Inspector",
+        "B": "AWS WAF",
+        "C": "AWS Macie",
+        "D": "AWS Shield"
+      },
+      "answer": "D",
+      "explanation": "AWS Shield provides managed DDoS protection to safeguard applications running on AWS. AWS Shield provides always-on detection and automatic inline mitigations to minimize application downtime and latency."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which method allows for secure user sign-up, sign-in, and access control to your web and mobile apps using AWS Lambda and Amazon API Gateway?",
+      "options": {
+        "A": "Amazon Cognito",
+        "B": "AWS IAM",
+        "C": "AWS Key Management Service",
+        "D": "Amazon Macie"
+      },
+      "answer": "A",
+      "explanation": "Amazon Cognito allows you to create a secure user directory that scales up to hundreds of millions of users. It's a fully managed service connecting easily to web or mobile apps through an SDK."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "In a multi-account AWS environment, which service would enable centralized logging of API activity across all accounts?",
+      "options": {
+        "A": "Amazon CloudWatch",
+        "B": "AWS CloudTrail",
+        "C": "AWS Config",
+        "D": "Amazon Inspector"
+      },
+      "answer": "B",
+      "explanation": "AWS CloudTrail enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your entire AWS infrastructure."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service would assist in managing keys for encryption and control use across AWS services?",
+      "options": {
+        "A": "AWS Key Management Service (KMS)",
+        "B": "A and B",
+        "C": "AWS Secrets Manager",
+        "D": "AWS CloudHSM"
+      },
+      "answer": "B",
+      "explanation": "Both AWS Key Management Service (KMS) and AWS CloudHSM help in managing cryptographic keys for your applications. KMS is fully managed and helps you create and control the encryption keys used to encrypt your data. AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to generate and use your own encryption keys."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service provides a Virtual Private Cloud (VPC) peering connection to help securely access services?",
+      "options": {
+        "A": "AWS Transit Gateway",
+        "B": "AWS PrivateLink",
+        "C": "AWS Direct Connect",
+        "D": "Amazon CloudFront"
+      },
+      "answer": "B",
+      "explanation": "AWS PrivateLink simplifies the security of data shared with cloud-based applications by eliminating the exposure of data to the public Internet. AWS PrivateLink provides private connectivity between VPCs, AWS services, and on-premises applications, securely on the Amazon network."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service allows organizations to create and manage users and groups and use permissions to allow and deny access to AWS resources?",
+      "options": {
+        "A": "Amazon Macie",
+        "B": "AWS Organizations",
+        "C": "AWS SSO",
+        "D": "AWS IAM"
+      },
+      "answer": "D",
+      "explanation": "AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. Using IAM, you can create and manage AWS users and groups and use permissions to allow and deny their access to AWS resources."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A client has requested the setup of a resilient web application with confidential data. How would you protect against DDoS attacks and secure data transmissions?",
+      "options": {
+        "A": "Use AWS Shield Advanced and ensure data transmission over HTTPS",
+        "B": "Implement AWS Shield and use AWS KMS for data encryption",
+        "C": "Utilize Amazon Macie and AWS CloudTrail",
+        "D": "Enable MFA for all IAM users"
+      },
+      "answer": "A",
+      "explanation": "AWS Shield Advanced provides enhanced DDoS protection for web applications. Ensuring data transmission over HTTPS provides a secure channel, preventing eavesdropping and securing data in transit."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A media company is leveraging Amazon S3 to store their high-definition video files. They want to securely share S3 objects with specific external vendors without making the objects public. What would be an appropriate solution?",
+      "options": {
+        "A": "Create a signed URL for objects using S3 pre-signed URLs",
+        "B": "Enable public access for the required S3 objects",
+        "C": "Utilize AWS Config to monitor and act on non-compliant resources",
+        "D": "Use AWS Lambda to replicate data into vendor accounts"
+      },
+      "answer": "A",
+      "explanation": "S3 pre-signed URLs provide secure, temporary access to S3 objects without requiring IAM permissions. A signed URL, valid for a specified period, allows secure object sharing with external entities."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "An e-commerce application stores sensitive customer data and uses multiple AWS services. How should a Solutions Architect ensure that API calls to AWS services are audited and monitored for security analysis?",
+      "options": {
+        "A": "Use AWS Secrets Manager to rotate keys",
+        "B": "Utilize AWS CloudTrail to log, monitor, and retain API calls",
+        "C": "Implement AWS Config for auditing API calls",
+        "D": "Use AWS SSO to simplify user access to AWS services"
+      },
+      "answer": "B",
+      "explanation": "AWS CloudTrail provides event history of AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, and command-line tools. It allows auditing and monitoring of API calls across AWS services, aiding in security analysis."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A financial firm processes critical transaction data and is required to comply with regulatory standards for data at rest encryption, key management, and auditability. Which services would collectively meet these requirements?",
+      "options": {
+        "A": "AWS Lambda, AWS KMS, and AWS Shield",
+        "B": "Amazon RDS with TDE, AWS CloudTrail, and AWS KMS",
+        "C": "Amazon CloudFront, Amazon S3 with SSE, and AWS CloudTrail",
+        "D": "Amazon Macie, AWS WAF, and Amazon CloudSearch"
+      },
+      "answer": "B",
+      "explanation": "Amazon RDS with Transparent Data Encryption (TDE) encrypts data at rest, AWS CloudTrail provides logging and auditing capabilities, and AWS Key Management Service (KMS) manages cryptographic keys, aligning with regulatory standards for sensitive financial data."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your company stores sensitive user data in an Amazon RDS instance. To comply with regulatory requirements, how can you automatically discover and classify this sensitive data?",
+      "options": {
+        "A": "Use Amazon GuardDuty",
+        "B": "Use AWS CloudTrail with Amazon SNS notifications",
+        "C": "Implement AWS Secrets Manager",
+        "D": "Utilize Amazon Macie"
+      },
+      "answer": "D",
+      "explanation": "Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data like Personally Identifiable Information (PII). Macie can help fulfill compliance needs by identifying and securing sensitive data stored in Amazon S3."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You have an application running in an Amazon VPC that needs to securely access a service outside of AWS. The data must not traverse the public internet. What should you do to achieve this?",
+      "options": {
+        "A": "Set up VPC Peering",
+        "B": "Implement a NAT Gateway",
+        "C": "Utilize AWS Direct Connect",
+        "D": "Use an AWS Transit Gateway"
+      },
+      "answer": "C",
+      "explanation": "AWS Direct Connect allows for a private, secure connection between your VPC and your own data center or corporate network, ensuring that the data does not traverse the public internet, fulfilling security and compliance requirements."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A gaming company uses an Auto Scaling group to manage EC2 instances hosting a multiplayer game. Suddenly, there's an unexpected surge in usage, and new EC2 instances are not launching. What might be a viable solution to investigate?",
+      "options": {
+        "A": "Remove all inbound rules in the security group",
+        "B": "Switch to a different instance type",
+        "C": "Review and potentially increase the AWS Service Quotas for EC2 instances",
+        "D": "Disable the Auto Scaling group"
+      },
+      "answer": "C",
+      "explanation": "Service Quotas in AWS define the limits for resources, actions, and items in your AWS account. Reviewing and potentially increasing the quotas for EC2 instances would allow more instances to be launched to handle the increased load."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You've set up AWS CloudTrail with an S3 bucket to store logs. For additional security, which practice would give the security team immediate access to analyze and act upon any API call that modifies VPC Security Groups?",
+      "options": {
+        "A": "Create a CloudWatch Alarm for VPC modifications and send notifications to SNS",
+        "B": "Use AWS Config to audit Security Group changes",
+        "C": "Store CloudTrail logs in an EBS volume and share it",
+        "D": "Enable AWS Shield Advanced"
+      },
+      "answer": "A",
+      "explanation": "Creating Amazon CloudWatch Alarms that monitor for specific API calls (like those modifying VPC Security Groups) and then sending notifications with Amazon SNS allows the security team to be immediately informed of changes and to take quick action."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You are tasked to securely manage and rotate database secrets for applications running on ECS. Which AWS service would you leverage?",
+      "options": {
+        "A": "AWS Certificate Manager",
+        "B": "AWS Key Management Service",
+        "C": "Amazon Macie",
+        "D": "AWS Secrets Manager"
+      },
+      "answer": "D",
+      "explanation": "AWS Secrets Manager helps you to protect access to your applications, services, and IT resources without the upfront investment and on-premises maintenance of traditional infrastructure. Secrets Manager enables you to rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A multi-national company needs to store customer data compliant with regional data protection regulations. How can you ensure that data stored in S3 is kept within specified geographical regions?",
+      "options": {
+        "A": "Utilize AWS CloudHSM",
+        "B": "Enable S3 Transfer Acceleration",
+        "C": "Configure S3 bucket policies for region restrictions",
+        "D": "Use Amazon Macie"
+      },
+      "answer": "C",
+      "explanation": "S3 bucket policies can be configured to enforce region compliance by denying operations in non-compliant regions, ensuring data residency requirements are adhered to."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "How can you securely enable developers to access and interact with AWS services, without storing AWS credentials on a development machine?",
+      "options": {
+        "A": "Use AWS KMS for credential storage",
+        "B": "Embed IAM user credentials in code",
+        "C": "Use AWS IAM roles with EC2 instances",
+        "D": "Store credentials in Amazon RDS"
+      },
+      "answer": "C",
+      "explanation": "IAM roles for EC2 instances allow applications running on the instance to interact with AWS services using permissions attached to the role. Credentials are automatically provided via the instance metadata, negating the need to store them with the application."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "An organization is using AWS CloudTrail for auditing purposes. They need to ensure the integrity of the logs. How can they achieve this?",
+      "options": {
+        "A": "Store CloudTrail logs in S3 and enable MFA Delete",
+        "B": "Send CloudTrail logs to CloudWatch Logs",
+        "C": "Use AWS Config to audit changes to CloudTrail",
+        "D": "Enable Log File Integrity Validation in CloudTrail"
+      },
+      "answer": "D",
+      "explanation": "Enabling Log File Integrity Validation in AWS CloudTrail provides an additional layer of security by delivering digitally signed files to your Amazon S3 bucket and allowing you to validate the integrity of the log files."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You need to provide a solution for storing sensitive customer data that adheres to regulatory compliance and audits. Which AWS service allows for hardware security module (HSM) clusters to be created, providing secure cryptographic key storage?",
+      "options": {
+        "A": "AWS Key Management Service",
+        "B": "AWS Secrets Manager",
+        "C": "AWS CloudHSM",
+        "D": "Amazon Macie"
+      },
+      "answer": "C",
+      "explanation": "AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud. It allows you to create HSM clusters, providing secure and compliant cryptographic key storage."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A healthcare application, deployed in a VPC, must restrict access to an RDS instance containing patient data, allowing only specific EC2 instances to connect. Which of the following practices enhances security for this setup?",
+      "options": {
+        "A": "Place RDS in a public subnet and use Security Groups to restrict access",
+        "B": "Place RDS and EC2 in a public subnet and use IAM policies for access control",
+        "C": "Use AWS Shield for RDS protection",
+        "D": "Place RDS in a private subnet and use Network ACLs for access control"
+      },
+      "answer": "D",
+      "explanation": "Placing the RDS instance in a private subnet and utilizing Network ACLs provides a secure layer by isolating the database from direct internet access and controlling traffic flow in and out of the subnet based on defined rules."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "A retail company using AWS Lambda to process user purchases wants to secure data at rest and in transit. Which combination of services/actions would help achieve this?",
+      "options": {
+        "A": "AWS KMS for data at rest, and using HTTPS for data in transit",
+        "B": "AWS CloudHSM for data in transit, and AWS Config for data at rest",
+        "C": "AWS WAF for data in transit, and S3 Server-Side Encryption (SSE) for data at rest",
+        "D": "AWS Direct Connect for data in transit, and EBS encryption for data at rest"
+      },
+      "answer": "A",
+      "explanation": "AWS KMS can be utilized to encrypt data at rest, and ensuring that data is sent over HTTPS (using TLS/SSL) secures it while in transit. This combination helps protect data throughout its lifecycle in the application."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You're creating a web application where users will upload videos. What is a secure way to allow users to upload files directly to S3?",
+      "options": {
+        "A": "Generate a pre-signed URL using IAM temporary credentials",
+        "B": "Use a permanent IAM user key to authenticate the upload",
+        "C": "Store AWS root account keys in the application code to allow upload access",
+        "D": "Place the S3 bucket in a public subnet and allow all traffic"
+      },
+      "answer": "A",
+      "explanation": "Pre-signed URLs provide a secure method to allow users to upload files directly to S3. By using IAM temporary credentials, the URLs are only valid for a specified duration and do not require exposing sensitive AWS credentials."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your solution must audit access and changes to AWS resources and provide a visual depiction to understand relationships and dependencies between them. Which AWS service can assist with this requirement?",
+      "options": {
+        "A": "AWS Config",
+        "B": "Amazon CloudWatch",
+        "C": "AWS CloudTrail",
+        "D": "AWS Trusted Advisor"
+      },
+      "answer": "A",
+      "explanation": "AWS Config records and evaluates configurations of your AWS resources. It allows you to audit access, visualize configurations, and see relationships and dependencies among resources, assisting in adhering to compliance requirements."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service can be used to protect web applications deployed on AWS from SQL injection and XSS attacks?",
+      "options": {
+        "A": "Amazon GuardDuty",
+        "B": "AWS Shield",
+        "C": "AWS Secrets Manager",
+        "D": "AWS WAF"
+      },
+      "answer": "D",
+      "explanation": "AWS WAF (Web Application Firewall) helps protect your web applications against common web exploits such as SQL injection and XSS attacks by allowing you to configure rules to filter, block, and monitor HTTP/HTTPS traffic."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "An organization is migrating its critical workloads to AWS and wants to ensure a resilient architecture against DDoS attacks. What service would provide DDoS mitigation and is designed to protect applications running on AWS?",
+      "options": {
+        "A": "AWS WAF",
+        "B": "AWS Macie",
+        "C": "Amazon Inspector",
+        "D": "AWS Shield"
+      },
+      "answer": "D",
+      "explanation": "AWS Shield provides managed Distributed Denial of Service (DDoS) protection to safeguard AWS applications. AWS Shield provides always-on detection and automatic inline mitigations that minimize application downtime and latency."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your company is developing a highly sensitive application, and regulatory requirements dictate that all data must be encrypted in transit and at rest. Which AWS service would allow you to centrally manage keys and cryptographic functions?",
+      "options": {
+        "A": "AWS Identity and Access Management (IAM)",
+        "B": "AWS Key Management Service (KMS)",
+        "C": "AWS Secrets Manager",
+        "D": "AWS CloudHSM"
+      },
+      "answer": "B",
+      "explanation": "AWS Key Management Service (KMS) is a managed service that makes it easy for you to create and control the encryption keys used to encrypt your data, and uses Hardware Security Modules (HSMs) to protect the security of your keys."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which of the following options allows an organization to audit API calls made on their account, making it easier to ensure regulatory compliance?",
+      "options": {
+        "A": "AWS Trusted Advisor",
+        "B": "AWS Config",
+        "C": "Amazon GuardDuty",
+        "D": "AWS CloudTrail"
+      },
+      "answer": "D",
+      "explanation": "AWS CloudTrail allows you to monitor, log, and retain calls related to actions across your AWS infrastructure, thus providing a clear audit trail that can be used to ensure compliance with regulatory standards."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "You need to deploy an application securely on EC2 instances and must ensure only authorized personnel can SSH into the instances. Which security practice should you follow?",
+      "options": {
+        "A": "Allow all inbound traffic on port 22 in Security Group",
+        "B": "Restrict inbound traffic on port 22 to known IP addresses",
+        "C": "Disable SSH access to all EC2 instances",
+        "D": "Use only IAM roles for SSH access"
+      },
+      "answer": "B",
+      "explanation": "Restricting inbound traffic on port 22 (SSH) to known IP addresses in your Security Group minimizes the attack surface by ensuring only authorized IP addresses have SSH access to the EC2 instances."
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Your application stores sensitive customer data in DynamoDB. How can you secure this data at rest?",
+      "options": {
+        "A": "Enable DynamoDB encryption at rest",
+        "B": "Enable Transparent Data Encryption (TDE)",
+        "C": "Use IPSEC VPN for DynamoDB data",
+        "D": "Store data in an encrypted EBS volume before writing to DynamoDB"
+      },
+      "answer": "A",
+      "explanation": "Enabling encryption at rest for an Amazon DynamoDB table adds another layer of data protection by securing your data from unauthorized access to the underlying storage."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "You need to ensure high availability for a web application. Which AWS service allows you to distribute incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones?",
+      "options": {
+        "A": "Amazon Route 53",
+        "B": "AWS Elastic Beanstalk",
+        "C": "Amazon CloudFront",
+        "D": "Amazon Elastic Load Balancer"
+      },
+      "answer": "D",
+      "explanation": "Amazon Elastic Load Balancer automatically distributes incoming application traffic across multiple targets, such as EC2 instances, and across multiple Availability Zones, thus enhancing the fault tolerance of your application."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which AWS service would you use to deploy a global application with low latency and high transfer speeds for your end-users?",
+      "options": {
+        "A": "AWS Direct Connect",
+        "B": "Amazon S3",
+        "C": "Amazon CloudFront",
+        "D": "Amazon Route 53"
+      },
+      "answer": "C",
+      "explanation": "Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A crucial web application is hosted in a single AWS region. To ensure business continuity in case of a region failure, what should be implemented?",
+      "options": {
+        "A": "Deploy the application in additional regions and use Amazon RDS Multi-AZ deployments",
+        "B": "Deploy the application in additional regions and use Amazon Route 53 for routing traffic",
+        "C": "Only use S3 Transfer Acceleration to minimize downtime",
+        "D": "Use AWS Snowball to transfer data to another region"
+      },
+      "answer": "B",
+      "explanation": "Deploying the application in multiple regions and utilizing Amazon Route 53 to route traffic to healthy regions ensures high availability and fault tolerance by providing failover capabilities in the event of a region failure."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To protect against data loss for critical data stored in Amazon RDS, which feature should be enabled?",
+      "options": {
+        "A": "Automated backups",
+        "B": "AWS DMS replication",
+        "C": "Amazon RDS read replicas",
+        "D": "AWS CloudTrail"
+      },
+      "answer": "A",
+      "explanation": "Enabling automated backups in Amazon RDS helps protect against data loss by automatically backing up your database in a DB instance. Backups can be used to restore your database instance."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To ensure a globally available application with the ability to handle peaks in user traffic, which combination of AWS services would be ideal?",
+      "options": {
+        "A": "Amazon EC2 and Amazon VPC",
+        "B": "AWS Lambda and Amazon API Gateway",
+        "C": "AWS Direct Connect and AWS VPN",
+        "D": "Amazon Redshift and Amazon RDS"
+      },
+      "answer": "B",
+      "explanation": "Combining AWS Lambda and Amazon API Gateway allows for serverless application deployment, automatically scaling with the number of requests. This combination can globally distribute the application and effectively handle variable traffic loads."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A multimedia company requires a storage solution for their large media files with immediate access whenever needed. Which AWS storage solution is most suitable for storing large amounts of data with instant accessibility?",
+      "options": {
+        "A": "Amazon Glacier",
+        "B": "AWS Snowball",
+        "C": "AWS Storage Gateway",
+        "D": "Amazon S3"
+      },
+      "answer": "D",
+      "explanation": "Amazon S3 provides scalable object storage with high durability and availability. It is suitable for storing large amounts of data and allows for instant access whenever the data is needed, making it suitable for storing large media files."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To achieve a fault-tolerant architecture for an RDS deployment which automatically replaces the failing DB instance and reduces downtime, which feature should you leverage?",
+      "options": {
+        "A": "Read Replicas",
+        "B": "Automated backups",
+        "C": "Multi-AZ deployments",
+        "D": "DB instance resizing"
+      },
+      "answer": "C",
+      "explanation": "Multi-AZ deployments for Amazon RDS provide high availability, failover support for DB instances, and automatically replace the failing DB instance, making it a suitable choice for production environments that require high uptime."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which AWS service will you use to mitigate the risk of service interruptions and to improve the reliability of applications by shifting traffic between multiple AWS resources?",
+      "options": {
+        "A": "AWS Elastic Beanstalk",
+        "B": "Amazon Route 53",
+        "C": "Amazon API Gateway",
+        "D": "Amazon CloudFront"
+      },
+      "answer": "B",
+      "explanation": "Amazon Route 53 is a scalable Domain Name System (DNS) web service designed to route end-user requests to endpoints in a globally distributed, low-latency manner. It can route traffic based upon multiple routing policies, ensuring high reliability and availability."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "How would you ensure that your application survives an Availability Zone (AZ) failure without any manual intervention?",
+      "options": {
+        "A": "Deploy across multiple AZs within a region",
+        "B": "Deploy across multiple regions",
+        "C": "Use a single, highly durable AZ",
+        "D": "Use AWS CloudFormation to redeploy"
+      },
+      "answer": "A",
+      "explanation": "Deploying your application across multiple Availability Zones (AZs) within a region allows your application to continue to operate despite the failure of an AZ. AWS services that are deployed across multiple AZs are designed to be resilient to AZ failures."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "You want to create a disaster recovery plan that allows for the rapid deployment of your applications to another AWS Region. Which AWS service would enable you to create and manage a collection of related AWS resources?",
+      "options": {
+        "A": "AWS Elastic Beanstalk",
+        "B": "AWS CloudFormation",
+        "C": "Amazon EC2 Auto Scaling",
+        "D": "AWS Config"
+      },
+      "answer": "B",
+      "explanation": "AWS CloudFormation allows you to use a template file to create and manage a collection of related AWS resources. By deploying CloudFormation templates in another region, you can quickly set up your applications in the event of a disaster."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A company wants to ensure that their mission-critical application is designed to handle AWS service disruptions and recover gracefully from them. Which design principle of the AWS Well-Architected Framework should be followed?",
+      "options": {
+        "A": "Use multiple Availability Zones",
+        "B": "All of the above",
+        "C": "Automate recovery",
+        "D": "Implement loose coupling"
+      },
+      "answer": "B",
+      "explanation": "All the mentioned principles - implementing loose coupling, using multiple Availability Zones, and automating recovery - are key principles for ensuring resilience against disruptions and are part of the AWS Well-Architected Framework."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To manage sudden spikes in traffic and maintain high availability, what should be implemented in front of Amazon EC2 instances?",
+      "options": {
+        "A": "Amazon Elastic Load Balancer",
+        "B": "Amazon CloudFront",
+        "C": "AWS Lambda",
+        "D": "Amazon RDS"
+      },
+      "answer": "A",
+      "explanation": "Amazon Elastic Load Balancer (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, handling varying loads and ensuring high availability and fault tolerance."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A company is storing critical business data in Amazon S3. What strategy should they employ to protect against accidental deletion of objects?",
+      "options": {
+        "A": "Use Amazon S3 Select",
+        "B": "Use S3 Transfer Acceleration",
+        "C": "Enable AWS Shield",
+        "D": "Enable versioning"
+      },
+      "answer": "D",
+      "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To ensure durability of data in Amazon S3, what does AWS recommend?",
+      "options": {
+        "A": "Storing data in multiple buckets",
+        "B": "Storing data in a single, highly durable Availability Zone",
+        "C": "Storing data redundantly across multiple Availability Zones",
+        "D": "Encrypting data at rest"
+      },
+      "answer": "C",
+      "explanation": "To ensure durability, Amazon S3 automatically stores your data redundantly across multiple geographically separated Availability Zones (AZs) to protect it from loss due to failure of any single computing resource."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which service would help in distributing incoming SSH traffic to EC2 instances across multiple Availability Zones?",
+      "options": {
+        "A": "Amazon Route 53",
+        "B": "Network Load Balancer",
+        "C": "Amazon S3 Transfer Acceleration",
+        "D": "AWS CloudTrail"
+      },
+      "answer": "B",
+      "explanation": "Network Load Balancer (NLB) is designed to handle TCP traffic and is capable of handling millions of requests per second while maintaining ultra-low latencies. It can distribute incoming SSH traffic among EC2 instances across multiple Availability Zones."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A company is using Amazon S3 to store critical business data. To ensure that the data is not lost due to accidental deletion, what should be enabled?",
+      "options": {
+        "A": "S3 Transfer Acceleration",
+        "B": "S3 Select",
+        "C": "S3 Cross-Region Replication",
+        "D": "S3 Versioning"
+      },
+      "answer": "D",
+      "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A company is using Amazon S3 to store critical business data. To ensure that the data is not lost due to accidental deletion, what should be enabled?",
+      "options": {
+        "A": "S3 Versioning",
+        "B": "S3 Select",
+        "C": "S3 Transfer Acceleration",
+        "D": "S3 Cross-Region Replication"
+      },
+      "answer": "A",
+      "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A company is using Amazon S3 to store critical business data. To ensure that the data is not lost due to accidental deletion, what should be enabled?",
+      "options": {
+        "A": "S3 Transfer Acceleration",
+        "B": "S3 Select",
+        "C": "S3 Versioning",
+        "D": "S3 Cross-Region Replication"
+      },
+      "answer": "C",
+      "explanation": "Enabling versioning in an Amazon S3 bucket keeps all versions of an object (including all writes and deletes) in the bucket. Thus, if objects are accidentally deleted or overwritten, they can be recovered."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which of the following services would be useful to maintain the seamless functionality of an application in case of a failure of one component, by redirecting traffic away from the affected component?",
+      "options": {
+        "A": "Amazon CloudFront",
+        "B": "Amazon S3",
+        "C": "AWS Elastic Beanstalk",
+        "D": "Amazon Route 53"
+      },
+      "answer": "D",
+      "explanation": "Amazon Route 53 helps to redirect traffic to healthy endpoints and can check the health of your application and its endpoints over the internet and reroute traffic to healthy endpoints in case of a failure."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "For an application requiring a file system with the capability to scale to petabytes of data which can be accessed by tens of thousands of EC2 instances concurrently, which AWS service should be utilized?",
+      "options": {
+        "A": "Amazon EFS",
+        "B": "Amazon S3",
+        "C": "Amazon EBS",
+        "D": "AWS Storage Gateway"
+      },
+      "answer": "A",
+      "explanation": "Amazon Elastic File System (EFS) is designed to provide massively parallel shared access to thousands of Amazon EC2 instances, enabling your applications to achieve high levels of aggregate throughput and IOPS with low-latency access to data."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which AWS service would provide a managed backup solution that supports policies to back up data across AWS services?",
+      "options": {
+        "A": "Amazon CloudWatch",
+        "B": "AWS Backup",
+        "C": "AWS CloudTrail",
+        "D": "AWS Snowball"
+      },
+      "answer": "B",
+      "explanation": "AWS Backup is a fully managed backup service that makes it easy to centralize and automate the back up of data across AWS services. It allows you to set policies and helps to meet compliance requirements."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "How can you best ensure high availability and fault tolerance for Amazon RDS instances?",
+      "options": {
+        "A": "Store RDS data in Amazon S3",
+        "B": "Use AWS Lambda for data replication",
+        "C": "Use Amazon EFS for database storage",
+        "D": "Use Multi-AZ deployments"
+      },
+      "answer": "D",
+      "explanation": "Amazon RDS Multi-AZ deployments provide enhanced availability and durability for Database (DB) Instances, making them a fitting solution for production database workloads."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To reduce latency for global users accessing your application, which AWS service would distribute content to multiple edge locations worldwide?",
+      "options": {
+        "A": "AWS Global Accelerator",
+        "B": "Amazon Route 53",
+        "C": "AWS Outposts",
+        "D": "Amazon CloudFront"
+      },
+      "answer": "D",
+      "explanation": "Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds, using a network of edge locations around the world."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "A company wants to ensure that their Amazon RDS instance is not a single point of failure. What feature of Amazon RDS should be implemented to ensure high availability?",
+      "options": {
+        "A": "Multi-AZ deployments",
+        "B": "Automated backups",
+        "C": "Read Replicas",
+        "D": "Database snapshots"
+      },
+      "answer": "A",
+      "explanation": "Multi-AZ deployments for Amazon RDS provide high availability and failover support for DB instances. In case the primary DB instance fails, Amazon RDS automatically fails over to the standby instance."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which AWS service would you use to automatically distribute incoming application traffic across multiple targets, such as EC2 instances, in one or more Availability Zones?",
+      "options": {
+        "A": "Amazon Route 53",
+        "B": "AWS Shield",
+        "C": "Amazon Elastic Load Balancing",
+        "D": "AWS Auto Scaling"
+      },
+      "answer": "C",
+      "explanation": "Amazon Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To ensure your application survives the loss of an entire AWS Region, what would be an appropriate measure?",
+      "options": {
+        "A": "Deploy in multiple Availability Zones",
+        "B": "Deploy in a single Availability Zone with backup",
+        "C": "Deploy in multiple AWS Regions",
+        "D": "Utilize Amazon Glacier for data storage"
+      },
+      "answer": "C",
+      "explanation": "Deploying in multiple AWS Regions provides the highest level of fault tolerance, as it ensures your application remains available even if an entire AWS Region becomes unavailable."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "How can Amazon S3 lifecycle policies assist in implementing a backup and archival strategy?",
+      "options": {
+        "A": "By triggering AWS Lambda functions for backups",
+        "B": "By transitioning objects between storage classes and optionally deleting them",
+        "C": "By automatically creating EBS snapshots",
+        "D": "By replicating data to another AWS account"
+      },
+      "answer": "B",
+      "explanation": "Amazon S3 lifecycle policies can be used to transition objects between storage classes at defined time intervals, moving them from more expensive, frequently accessed storage to cheaper, infrequently accessed storage, and optionally deleting them."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which AWS service can synchronize data across different AWS Regions, enabling low-latency access to a globally distributed dataset?",
+      "options": {
+        "A": "Amazon S3 Transfer Acceleration",
+        "B": "Amazon S3 Cross-Region Replication",
+        "C": "Amazon DynamoDB Global Tables",
+        "D": "AWS Global Accelerator"
+      },
+      "answer": "C",
+      "explanation": "Amazon DynamoDB Global Tables enables your applications to read and write data with single-digit millisecond latency by automatically replicating and synchronizing tables across different AWS Regions."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "An organization is using AWS CloudFormation for infrastructure as code. They want to ensure rapid roll back in case of failures during stack creation. Which feature should they enable?",
+      "options": {
+        "A": "Rollback on failure",
+        "B": "AWS Config",
+        "C": "AWS CloudTrail logging",
+        "D": "Stack policy"
+      },
+      "answer": "A",
+      "explanation": "Enabling 'Rollback on failure' in AWS CloudFormation ensures that if stack creation fails, all AWS resources that were created are deleted, which helps in avoiding any potential costs or orphaned resources."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which AWS service can be employed to monitor the application and AWS resources and respond to system-wide performance changes?",
+      "options": {
+        "A": "AWS WAF",
+        "B": "Amazon CloudWatch",
+        "C": "Amazon CloudSearch",
+        "D": "Amazon Macie"
+      },
+      "answer": "B",
+      "explanation": "Amazon CloudWatch is a monitoring service for AWS resources and the applications you run on the AWS platform. It can be used to collect and track metrics, collect and monitor log files, and set alarms for resource and application health."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "To ensure minimal downtime during the maintenance and patching of Amazon RDS databases, which deployment configuration would be suitable?",
+      "options": {
+        "A": "Single-AZ Deployments",
+        "B": "Multi-AZ Deployments",
+        "C": "Read Replicas",
+        "D": "Database snapshots"
+      },
+      "answer": "B",
+      "explanation": "Multi-AZ deployments for Amazon RDS provide enhanced availability and durability during database maintenance tasks. AWS automatically updates the DNS endpoint to point to the standby replica in case of primary DB instance failure or maintenance."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "An application stores sensitive data in Amazon RDS and needs to maintain a strict RTO and RPO. Which strategy would provide a balance between high availability and cost-effectiveness?",
+      "options": {
+        "A": "Use Amazon RDS Multi-AZ with automated backups",
+        "B": "Use Amazon Aurora with Multi-Master",
+        "C": "Use Amazon RDS with a standby instance in another Region",
+        "D": "Use an on-premises database for failover"
+      },
+      "answer": "A",
+      "explanation": "Using Amazon RDS Multi-AZ deployments with automated backups ensures high availability by providing a standby replica in another Availability Zone and maintains backups for point-in-time recovery, balancing cost and reliability."
+    },
+    {
+      "topic": "Design Resilient Architectures",
+      "question": "Which of the following services will help in automating the provisioning and scaling of applications so that they can handle the additional load during traffic spikes?",
+      "options": {
+        "A": "All of the above",
+        "B": "AWS Auto Scaling",
+        "C": "AWS Lambda",
+        "D": "AWS Elastic Beanstalk"
+      },
+      "answer": "A",
+      "explanation": "All mentioned services, AWS Auto Scaling, AWS Elastic Beanstalk, and AWS Lambda can help manage and scale applications. Auto Scaling adjusts instances as needed, Elastic Beanstalk automates provisioning, and Lambda handles burstable workloads without provisioning servers."
+    }
+  ]
 }

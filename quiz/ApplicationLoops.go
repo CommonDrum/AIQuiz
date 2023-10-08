@@ -90,6 +90,7 @@ func questionCheck(input string, question Question) {
 
 		fmt.Println("Correct!")
 		fmt.Println()
+		fmt.Println(question.Explanation)
 
 	} else {
 
