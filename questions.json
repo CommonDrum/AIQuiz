@@ -1,172 +1,508 @@
 {
   "questions": [
     {
-      "topic": "Taylor Swift",
-      "question": "Which album includes the hit song 'Love Story'?",
+      "topic": "Cloud Concepts",
+      "question": "Which architectural principle suggests that AWS applications should be able to adapt to changes in capacity and demand?",
       "options": {
-        "A": "1989",
-        "B": "Fearless",
-        "C": "Reputation",
-        "D": "Red"
+        "A": "Design for elasticity",
+        "B": "Design for durability",
+        "C": "Design for adaptability",
+        "D": "Design for consistency"
       },
-      "answer": "B",
-      "explanation": "'Love Story' is one of the hit songs from Taylor Swift's second studio album, 'Fearless', released in 2008."
+      "answer": "A",
+      "explanation": "The principle of designing for elasticity suggests that applications should automatically adapt to changing capacities and demands, scaling resources up or down as needed."
     },
     {
-      "topic": "Taylor Swift",
-      "question": "What is Taylor Swift's middle name?",
+      "topic": "Cloud Concepts",
+      "question": "Why do businesses typically move to the cloud?",
       "options": {
-        "A": "Ashley",
-        "B": "Amanda",
-        "C": "Alison",
-        "D": "Andrea"
+        "A": "To avoid innovation",
+        "B": "To use physical hardware",
+        "C": "To maximize upfront costs",
+        "D": "To gain operational agility"
+      },
+      "answer": "D",
+      "explanation": "Moving to the cloud provides businesses with operational agility by allowing them to quickly adapt to changes, innovate, and reduce time-to-market."
+    },
+    {
+      "topic": "Security and Compliance",
+      "question": "Which AWS service would be best for centrally managing policies across multiple AWS accounts?",
+      "options": {
+        "A": "AWS Config",
+        "B": "AWS Organizations",
+        "C": "AWS Shield",
+        "D": "AWS Macie"
+      },
+      "answer": "B",
+      "explanation": "AWS Organizations allows users to centrally manage and enforce policies for multiple AWS accounts."
+    },
+    {
+      "topic": "Security and Compliance",
+      "question": "If a company wants to store highly sensitive data in S3, what should they consider doing?",
+      "options": {
+        "A": "Disable logging",
+        "B": "Use public read permissions",
+        "C": "Use S3 Transfer Acceleration",
+        "D": "Encrypt the data at rest"
+      },
+      "answer": "D",
+      "explanation": "Encrypting data at rest ensures that sensitive data remains secure and inaccessible to unauthorized users."
+    },
+    {
+      "topic": "Technology",
+      "question": "What can be used in AWS to automate the deployment of applications, networks, and services?",
+      "options": {
+        "A": "Amazon Comprehend",
+        "B": "AWS Elastic Beanstalk",
+        "C": "AWS CloudFormation",
+        "D": "Amazon Athena"
       },
       "answer": "C",
-      "explanation": "Taylor Swift's middle name is Alison."
+      "explanation": "AWS CloudFormation allows users to define and provision AWS infrastructure using templates, automating the deployment of resources."
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Which Taylor Swift album was released in 2014?",
+      "topic": "Technology",
+      "question": "Which AWS service allows you to run SQL queries directly on data stored in Amazon S3?",
       "options": {
-        "A": "1989",
-        "B": "Fearless",
-        "C": "Speak Now",
-        "D": "Red"
+        "A": "Amazon Athena",
+        "B": "Amazon RDS",
+        "C": "Amazon Redshift",
+        "D": "AWS Lambda"
       },
       "answer": "A",
-      "explanation": "'1989' is Taylor Swift's fifth studio album, released on October 27, 2014."
+      "explanation": "Amazon Athena allows users to run SQL queries directly on data stored in Amazon S3, without the need for complex ETL processes or additional infrastructure."
     },
     {
-      "topic": "Taylor Swift",
-      "question": "In which year did Taylor Swift move to Nashville to pursue her music career?",
+      "topic": "Billing and Pricing",
+      "question": "Which of the following is NOT a cost optimization recommendation in AWS?",
       "options": {
-        "A": "2005",
-        "B": "2004",
-        "C": "2003",
-        "D": "2006"
-      },
-      "answer": "B",
-      "explanation": "Taylor Swift moved to Nashville in 2004 to pursue her music career."
-    },
-    {
-      "topic": "Taylor Swift",
-      "question": "What is the first track on the 'Red (Taylor’s Version)' album?",
-      "options": {
-        "A": "Red",
-        "B": "I Knew You Were Trouble",
-        "C": "22",
-        "D": "State of Grace"
+        "A": "Monitor usage patterns with AWS Cost Explorer.",
+        "B": "Purchase Reserved Instances for steady-state applications.",
+        "C": "Store infrequently accessed data in S3 Glacier.",
+        "D": "Always use the largest EC2 instances available."
       },
       "answer": "D",
-      "explanation": "The first track on the 'Red (Taylor’s Version)' album is 'State of Grace'."
+      "explanation": "Using the largest EC2 instances can lead to unnecessary costs. It's recommended to choose instance sizes based on actual application needs and to continuously monitor and adjust as required."
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Which of the following songs is NOT from the 'Lover' album?",
+      "topic": "Billing and Pricing",
+      "question": "If you reserve an Amazon EC2 instance for a 1-year term, what pricing model are you adopting?",
       "options": {
-        "A": "You Need To Calm Down",
-        "B": "Me!",
-        "C": "Delicate",
-        "D": "The Man"
+        "A": "Spot Instance pricing",
+        "B": "Savings Plan",
+        "C": "On-Demand pricing",
+        "D": "Reserved Instance pricing"
+      },
+      "answer": "D",
+      "explanation": "Reserved Instances provide users with a discounted hourly rate (up to 75% off the On-Demand price) in exchange for committing to a 1-year or 3-year term."
+    },
+    {
+      "topic": "Elastic Load Balancing",
+      "question": "Which AWS service is designed to automatically distribute incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses?",
+      "options": {
+        "A": "Amazon Route 53",
+        "B": "Amazon Elastic Load Balancer",
+        "C": "AWS Direct Connect",
+        "D": "Amazon EFS"
+      },
+      "answer": "B",
+      "explanation": "Amazon Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses, in one or more Availability Zones."
+    },
+    {
+      "topic": "Lambda",
+      "question": "Which AWS service allows you to run code without provisioning or managing servers and automatically scales, from a few requests per day to thousands per second?",
+      "options": {
+        "A": "Amazon ECS",
+        "B": "AWS Lambda",
+        "C": "Amazon EMR",
+        "D": "Amazon EC2"
+      },
+      "answer": "B",
+      "explanation": "AWS Lambda lets you run code without provisioning or managing servers. You can run code for virtually any type of application or backend service with zero administration."
+    },
+    {
+      "topic": "Security",
+      "question": "Which AWS service provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships change over time?",
+      "options": {
+        "A": "Amazon GuardDuty",
+        "B": "AWS Config",
+        "C": "Amazon Inspector",
+        "D": "AWS Shield"
+      },
+      "answer": "B",
+      "explanation": "AWS Config provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships change over time."
+    },
+    {
+      "topic": "Networking",
+      "question": "Which AWS service allows you to securely transfer data over a dedicated network connection from your on-premises environment to AWS?",
+      "options": {
+        "A": "Amazon API Gateway",
+        "B": "AWS Direct Connect",
+        "C": "AWS Transit Gateway",
+        "D": "Amazon VPC"
+      },
+      "answer": "B",
+      "explanation": "AWS Direct Connect makes it easy to establish a dedicated network connection from your premises to AWS, reducing your network costs, increasing bandwidth throughput, and providing a more consistent network experience."
+    },
+    {
+      "topic": "Storage",
+      "question": "Which AWS service offers a petabyte-scale data transport solution that uses secure devices to transfer large amounts of data into and out of the AWS Cloud?",
+      "options": {
+        "A": "Amazon S3 Transfer Acceleration",
+        "B": "AWS Snowball",
+        "C": "Amazon EFS",
+        "D": "AWS DataSync"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Database",
+      "question": "Which AWS database service is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability?",
+      "options": {
+        "A": "Amazon RDS",
+        "B": "Amazon Aurora",
+        "C": "Amazon Redshift",
+        "D": "Amazon DynamoDB"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "topic": "Compute",
+      "question": "Which AWS service allows you to deploy, manage, and scale containerized applications using Kubernetes?",
+      "options": {
+        "A": "AWS Fargate",
+        "B": "Amazon EKS",
+        "C": "Amazon ECR",
+        "D": "Amazon ECS"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Monitoring",
+      "question": "Which AWS service collects monitoring and operational data in the form of logs, metrics, and events?",
+      "options": {
+        "A": "Amazon Inspector",
+        "B": "Amazon CloudWatch",
+        "C": "AWS CloudTrail",
+        "D": "AWS X-Ray"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Security",
+      "question": "Which AWS service helps you protect your AWS accounts and workloads by enabling security automation based on AWS best practices?",
+      "options": {
+        "A": "Amazon Macie",
+        "B": "AWS Secrets Manager",
+        "C": "AWS WAF",
+        "D": "AWS Security Hub"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "topic": "Analytics",
+      "question": "Which AWS service is a fully managed extract, transform, and load (ETL) service that makes it easy for users to prepare and load their data for analytics?",
+      "options": {
+        "A": "AWS Glue",
+        "B": "Amazon QuickSight",
+        "C": "Amazon Kinesis",
+        "D": "Amazon Athena"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Migration \u0026 Transfer",
+      "question": "Which service helps you migrate databases to AWS easily and securely while the source database remains fully operational during the migration?",
+      "options": {
+        "A": "AWS Transfer for SFTP",
+        "B": "AWS Migration Hub",
+        "C": "AWS DMS (Database Migration Service)",
+        "D": "AWS Snowball Edge"
       },
       "answer": "C",
-      "explanation": "'Delicate' is a song from Taylor Swift's 'Reputation' album, not 'Lover'."
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Who did Taylor Swift collaborate with on the song 'Exile'?",
+      "topic": "Machine Learning",
+      "question": "Which AWS service provides developers and data scientists with the tools to build, train, and deploy machine learning models quickly?",
       "options": {
-        "A": "Ed Sheeran",
-        "B": "Bon Iver",
-        "C": "The Civil Wars",
-        "D": "Gary Lightbody"
+        "A": "Amazon Lex",
+        "B": "Amazon Translate",
+        "C": "Amazon SageMaker",
+        "D": "Amazon Polly"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Front-End Web \u0026 Mobile",
+      "question": "Which AWS service allows you to add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily?",
+      "options": {
+        "A": "Amazon Pinpoint",
+        "B": "Amazon Cognito",
+        "C": "Amazon SNS",
+        "D": "AWS Amplify"
       },
       "answer": "B",
-      "explanation": "Taylor Swift collaborated with Bon Iver on the song 'Exile'."
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Which of the following albums was released first?",
+      "topic": "Cost Management",
+      "question": "Which AWS service provides insights, recommendations, and automation to track your AWS cost and usage?",
       "options": {
-        "A": "Speak Now",
-        "B": "Fearless",
-        "C": "Reputation",
-        "D": "1989"
-      },
-      "answer": "B",
-      "explanation": "'Fearless' was released in 2008 and is Taylor Swift's second studio album."
-    },
-    {
-      "topic": "Taylor Swift",
-      "question": "Which actor appeared as Taylor's love interest in the 'We Are Never Ever Getting Back Together' music video?",
-      "options": {
-        "A": "Noah Mills",
-        "B": "Toby Hemingway",
-        "C": "Brandon Routh",
-        "D": "Sean O'Pry"
+        "A": "AWS Cost Explorer",
+        "B": "AWS Organizations",
+        "C": "AWS Trusted Advisor",
+        "D": "AWS Budgets"
       },
       "answer": "A",
-      "explanation": "Noah Mills appeared as Taylor's love interest in the 'We Are Never Ever Getting Back Together' music video."
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Who is the 'Back To December' song rumored to be about?",
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service provides a Virtual Private Network (VPN) solution to extend on-premises networks to AWS?",
       "options": {
-        "A": "Jake Gyllenhaal",
-        "B": "Joe Jonas",
-        "C": "John Mayer",
-        "D": "Taylor Lautner"
+        "A": "Amazon Direct Connect",
+        "B": "AWS VPN",
+        "C": "Amazon Connect",
+        "D": "Amazon Route 53"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which of the following provides centralized control to manage AWS cloud resources, view compliance status, and detect security and configuration drifts?",
+      "options": {
+        "A": "AWS GuardDuty",
+        "B": "Amazon Macie",
+        "C": "Amazon Inspector",
+        "D": "AWS Config"
       },
       "answer": "D",
-      "explanation": "'Back To December' is rumored to be about Taylor Lautner."
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "What is the name of Taylor Swift's first album?",
+      "topic": "Design Secure Architectures",
+      "question": "Which service allows for key management and cryptographic functions within AWS?",
       "options": {
-        "A": "Taylor Swift",
-        "B": "Fearless",
-        "C": "Red",
-        "D": "Speak Now"
+        "A": "Amazon Pinpoint",
+        "B": "AWS Secrets Manager",
+        "C": "Amazon KMS",
+        "D": "AWS Single Sign-On"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS feature lets you control who can access your Amazon S3 buckets and objects?",
+      "options": {
+        "A": "Amazon S3 ACLs",
+        "B": "Amazon S3 Block Public Access",
+        "C": "All of the above",
+        "D": "Amazon S3 Access Points"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service continuously monitors your environment for signs of malicious or unauthorized activity?",
+      "options": {
+        "A": "AWS WAF",
+        "B": "AWS GuardDuty",
+        "C": "Amazon CloudWatch",
+        "D": "Amazon Detective"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which service allows you to analyze access patterns of IAM users and establish permissions based on access activity?",
+      "options": {
+        "A": "AWS Trusted Advisor",
+        "B": "IAM Roles",
+        "C": "AWS Access Analyzer",
+        "D": "Amazon GuardDuty"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "How can you ensure that data at rest in an S3 bucket is encrypted?",
+      "options": {
+        "A": "All of the above",
+        "B": "Implement AWS KMS managed keys",
+        "C": "Use Amazon S3 default encryption",
+        "D": "Use Server-Side Encryption"
       },
       "answer": "A",
-      "explanation": "Taylor Swift's first album, released in 2006, is self-titled 'Taylor Swift'."
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "In which year did Taylor Swift receive the Billboard Woman of the Decade Award?",
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service helps protect web applications from common web exploits?",
       "options": {
-        "A": "2018",
-        "B": "2021",
-        "C": "2020",
-        "D": "2019"
+        "A": "AWS WAF",
+        "B": "Amazon GuardDuty",
+        "C": "Amazon Macie",
+        "D": "AWS Shield"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service provides deep visibility into API calls made on your account, including their source and the actions that followed?",
+      "options": {
+        "A": "Amazon CloudWatch",
+        "B": "AWS Config",
+        "C": "AWS CloudTrail",
+        "D": "Amazon S3 Logging"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "How can you ensure your EC2 instances are only accessible from specific IP addresses?",
+      "options": {
+        "A": "Using AWS WAF rules",
+        "B": "Through S3 bucket policies",
+        "C": "Using Amazon GuardDuty",
+        "D": "Restricting access through Security Groups"
       },
       "answer": "D",
-      "explanation": "Taylor Swift received the Billboard Woman of the Decade Award in 2019."
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Which song features the lyric 'Cause the players gonna play, play, play'?",
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service allows you to manage user access to AWS services and resources?",
       "options": {
-        "A": "Love Story",
-        "B": "Shake It Off",
-        "C": "Red",
-        "D": "22"
+        "A": "AWS Organizations",
+        "B": "Amazon Cognito",
+        "C": "AWS Single Sign-On",
+        "D": "AWS Identity and Access Management (IAM)"
       },
-      "answer": "B",
-      "explanation": "The lyric 'Cause the players gonna play, play, play' is from the song 'Shake It Off'."
+      "answer": "D",
+      "explanation": ""
     },
     {
-      "topic": "Taylor Swift",
-      "question": "Who did Taylor Swift collaborate with on the song 'End Game'?",
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service provides security posture management and automated security assessment reports?",
       "options": {
-        "A": "Kendrick Lamar",
-        "B": "Ed Sheeran and Future",
-        "C": "Zayn Malik",
-        "D": "Brendon Urie"
+        "A": "AWS Security Hub",
+        "B": "Amazon Detective",
+        "C": "Amazon GuardDuty",
+        "D": "AWS Artifact"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service helps classify and protect sensitive data through machine learning?",
+      "options": {
+        "A": "Amazon Macie",
+        "B": "Amazon CloudSearch",
+        "C": "AWS Shield",
+        "D": "Amazon Comprehend"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "For compliance reasons, you need to retain API call logs for an extended period. Which service will you use?",
+      "options": {
+        "A": "Amazon CloudWatch Logs",
+        "B": "AWS CloudTrail with S3",
+        "C": "Amazon GuardDuty",
+        "D": "AWS Config"
       },
       "answer": "B",
-      "explanation": "Taylor Swift collaborated with Ed Sheeran and Future on the song 'End Game'."
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which of the following is NOT a benefit of using AWS PrivateLink?",
+      "options": {
+        "A": "Scales automatically",
+        "B": "Keeps traffic off the public Internet",
+        "C": "Works with any AWS service",
+        "D": "Prevents DDoS attacks"
+      },
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS feature or service provides hardware-based cryptographic key storage?",
+      "options": {
+        "A": "AWS CloudHSM",
+        "B": "Amazon S3 Server-Side Encryption",
+        "C": "AWS Key Pairs",
+        "D": "AWS Secrets Manager"
+      },
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which service can be used to centrally manage users and their access across AWS accounts?",
+      "options": {
+        "A": "Amazon WorkDocs",
+        "B": "AWS Directory Service",
+        "C": "Amazon Connect",
+        "D": "AWS Organizations"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which of the following can be used to protect against DDoS attacks on AWS?",
+      "options": {
+        "A": "AWS Firewall Manager",
+        "B": "Amazon Kinesis Data Streams",
+        "C": "Amazon Detective",
+        "D": "AWS Shield"
+      },
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "Which AWS service allows you to establish a dedicated network connection from your premises to AWS?",
+      "options": {
+        "A": "AWS VPN CloudHub",
+        "B": "AWS Direct Connect",
+        "C": "Amazon VPC Peering",
+        "D": "Amazon Route 53 Resolver"
+      },
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "topic": "Design Secure Architectures",
+      "question": "What does AWS recommend for the protection of AWS access keys?",
+      "options": {
+        "A": "Embed them in your application code",
+        "B": "Email them to team members",
+        "C": "Save them in plaintext documents",
+        "D": "Use IAM roles for EC2 instances"
+      },
+      "answer": "D",
+      "explanation": ""
     }
   ]
 }

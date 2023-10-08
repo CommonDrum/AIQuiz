@@ -36,7 +36,7 @@ func (question Question) Print() {
 
 }
 
-func (quiz Quiz) GetRandomQuestion() Question {
+func (quiz Quiz) GetRandomIndex() int {
 	randomIndex := rand.Intn(len(quiz.Questions))
-	return quiz.Questions[randomIndex]
+	return randomIndex
 }

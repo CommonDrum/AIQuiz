@@ -38,3 +38,23 @@ func saveQuiz(fileName string, quiz Quiz) {
 		log.Fatalf("Error writing to file: %v", err)
 	}
 }
+
+type RepetitionDetector struct {
+	int map[int]bool
+}
+
+func (detector *RepetitionDetector) Add(i int) bool {
+	if detector.int[i] {
+		return true
+	}
+	detector.int[i] = true
+	return false
+}
+
+func (detector *RepetitionDetector) Reset() {
+	detector.int = make(map[int]bool)
+}
+
+func (detector *RepetitionDetector) Get(i int) bool {
+	return detector.int[i]
+}

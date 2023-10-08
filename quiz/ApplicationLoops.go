@@ -38,10 +38,20 @@ func StartQuiz(quiz Quiz, isAppLoopRunning *bool) {
 
 	var input string
 	var currentQuestion Question
+	var currentIndex int
+	var detector RepetitionDetector
+	detector.Reset()
 
 	for isRunning {
-		currentQuestion = quiz.GetRandomQuestion()
 
+		currentIndex = quiz.GetRandomIndex()
+
+		for detector.Add(currentIndex) {
+			currentIndex = quiz.GetRandomIndex()
+		}
+		//TODO: handle case when all questions are asked
+
+		currentQuestion = quiz.Questions[currentIndex]
 		currentQuestion.Print()
 
 		fmt.Scan(&input)
