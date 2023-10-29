@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która kość tworzy dolną ścianę oczodołu?",
+      "options": {
+        "A": "Kość klinowa",
+        "B": "Kość jarzmowa",
+        "C": "Kość łzowa",
+        "D": "Kość szczękowa"
+      },
+      "answer": "A",
+      "explanation": "Kość klinowa tworzy dolną ścianę oczodołu."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "W którym miejscu kość skroniowa łączy się z kością potyliczną?",
+      "options": {
+        "A": "Szew łuskowy",
+        "B": "Szew strzałkowy",
+        "C": "Szew poprzeczny",
+        "D": "Szew wieńcowy"
+      },
+      "answer": "C",
+      "explanation": "Kość skroniowa łączy się z kością potyliczną w szwie poprzecznym."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która kość czaszki posiada wyrostek jarzmowy?",
+      "options": {
+        "A": "Kość skroniowa",
+        "B": "Kość jarzmowa",
+        "C": "Kość szczękowa",
+        "D": "Kość nosowa"
+      },
+      "answer": "A",
+      "explanation": "To kość skroniowa posiada wyrostek jarzmowy."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która z poniższych kości nie jest kością twarzoczaszki?",
+      "options": {
+        "A": "Kość łzowa",
+        "B": "Kość ciemieniowa",
+        "C": "Kość szczękowa",
+        "D": "Kość nosowa"
+      },
+      "answer": "B",
+      "explanation": "Kość ciemieniowa jest kością neuroczaszki, a nie twarzoczaszki."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która z kości tworzy tylną część podniebienia twardego?",
+      "options": {
+        "A": "Kość szczękowa",
+        "B": "Kość jarzmowa",
+        "C": "Kość gnykowa",
+        "D": "Kość podniebienna"
+      },
+      "answer": "D",
+      "explanation": "Kość podniebienna tworzy tylną część podniebienia twardego."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która z poniższych kości nie jest para?",
+      "options": {
+        "A": "Kość czołowa",
+        "B": "Kość nosowa",
+        "C": "Kość łzowa",
+        "D": "Kość jarzmowa"
+      },
+      "answer": "A",
+      "explanation": "Kość czołowa jest pojedyncza, podczas gdy pozostałe kości są sparowane."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która z kości tworzy boczne ściany oczodołu?",
+      "options": {
+        "A": "Kość jarzmowa",
+        "B": "Kość łzowa",
+        "C": "Kość klinowa",
+        "D": "Kość skroniowa"
+      },
+      "answer": "A",
+      "explanation": "Kość jarzmowa tworzy boczne ściany oczodołu."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "W którym miejscu znajduje się otwór nosowy?",
+      "options": {
+        "A": "Kość podniebienna",
+        "B": "Kość szczękowa",
+        "C": "Kość nosowa",
+        "D": "Kość czołowa"
+      },
+      "answer": "B",
+      "explanation": "Otwór nosowy znajduje się w kości szczękowej."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która z poniższych kości tworzy dolną ścianę jamy nosowej?",
+      "options": {
+        "A": "Kość klinowa",
+        "B": "Kość nosowa",
+        "C": "Kość szczękowa",
+        "D": "Kość podniebienna"
+      },
+      "answer": "D",
+      "explanation": "Kość podniebienna tworzy dolną ścianę jamy nosowej."
+    },
+    {
+      "topic": "Anatomia medyczna - kości czaszki",
+      "question": "Która z kości tworzy górną ścianę jamy nosowej?",
+      "options": {
+        "A": "Kość nosowa",
+        "B": "Kość jarzmowa",
+        "C": "Kość czołowa",
+        "D": "Kość skroniowa"
+      },
+      "answer": "C",
+      "explanation": "Kość czołowa tworzy górną ścianę jamy nosowej."
+    }
+  ]
+}

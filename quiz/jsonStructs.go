@@ -25,7 +25,8 @@ type Quiz struct {
 }
 
 func (question Question) Print() {
-
+	fmt.Println("----------------------------------------  Question ----------------------------------------")
+	fmt.Println()
 	fmt.Println(question.Question)
 	fmt.Println()
 	fmt.Println("A. " + question.Options.A)

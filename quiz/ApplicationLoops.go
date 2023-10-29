@@ -5,9 +5,9 @@ import (
 	"strings"
 )
 
-func StartApp() { // change thais to be run in the loop as the code for exiting now is wierd
+func StartApp(question_set_name string) { // change thais to be run in the loop as the code for exiting now is wierd
 
-	quiz := loadQuiz("questions.json")
+	quiz := loadQuiz("question_sets/" + question_set_name + ".json")
 
 	isRunning := true
 	var input string
